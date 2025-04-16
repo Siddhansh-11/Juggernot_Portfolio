@@ -14,15 +14,15 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        className="container mx-auto px-6 relative z-10"
       >
-        <div>
+        <div className="max-w-xl">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
             AI Agents, built for{" "}
             <span className="gradient-text">speed, scale, and quality</span>
           </h1>
 
-          <p className="text-lg text-gray-300 mb-10 max-w-xl">
+          <p className="text-lg text-gray-300 mb-10">
             Handling complex queries, boosting efficiency, and streamlining
             support, so your business scales faster with precision.
           </p>
@@ -43,41 +43,6 @@ export default function HeroSection() {
             </Button>
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative grid-lines rounded-2xl border border-border/20 p-8 h-[400px] flex items-center justify-center"
-        >
-          <svg
-            className="w-full h-full object-cover object-center rounded-lg opacity-80 mix-blend-lighten"
-            viewBox="0 0 800 600"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g opacity="0.8">
-              <circle cx="400" cy="300" r="200" stroke="#6C5CE7" strokeWidth="2" strokeDasharray="10 5" />
-              <circle cx="400" cy="300" r="150" stroke="#6C5CE7" strokeWidth="2" strokeDasharray="10 5" />
-              <circle cx="400" cy="300" r="100" stroke="#6C5CE7" strokeWidth="2" strokeDasharray="10 5" />
-              
-              <path d="M300 300 L500 300" stroke="#4B0082" strokeWidth="2" />
-              <path d="M400 200 L400 400" stroke="#4B0082" strokeWidth="2" />
-              
-              <circle cx="350" cy="250" r="15" fill="#6C5CE7" />
-              <circle cx="450" cy="350" r="15" fill="#6C5CE7" />
-              <circle cx="350" cy="350" r="15" fill="#4B0082" />
-              <circle cx="450" cy="250" r="15" fill="#4B0082" />
-              
-              <path d="M350 250 L450 250 L450 350 L350 350 Z" stroke="#FFFFFF" strokeWidth="1" strokeDasharray="5 5" />
-              
-              <path d="M250 200 C300 150, 500 150, 550 200" stroke="#6C5CE7" strokeWidth="2" />
-              <path d="M250 400 C300 450, 500 450, 550 400" stroke="#6C5CE7" strokeWidth="2" />
-              
-              <text x="380" y="310" fill="white" fontSize="14" fontFamily="Inter, sans-serif">AI</text>
-            </g>
-          </svg>
-        </motion.div>
       </motion.div>
     </section>
   );
