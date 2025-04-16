@@ -34,6 +34,12 @@ export interface ProjectMetric {
   icon?: React.ReactElement;
 }
 
+export interface TechStackItem {
+  name: string;
+  logo?: string; // URL to logo image or icon
+  category: 'communication' | 'design' | 'development' | 'analytics';
+}
+
 export interface ProjectDetails {
   id: string; // Unique identifier, also used for URL routing
   title: string;
@@ -48,6 +54,7 @@ export interface ProjectDetails {
   painPoints: ProjectPainPoint[];
   solutionDescription: string;
   solutions: ProjectSolution[];
+  techStack: TechStackItem[]; // Tech stack used in the project
   testimonial?: ProjectTestimonial;
 }
 
@@ -102,6 +109,19 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
         title: "AI-Powered Compliance",
         description: "Created automated systems that continuously monitor and adapt to regulatory changes, reducing manual oversight by 85%."
       }
+    ],
+    techStack: [
+      { name: "Slack", category: "communication" },
+      { name: "Microsoft Teams", category: "communication" },
+      { name: "Figma", category: "design" },
+      { name: "Adobe XD", category: "design" },
+      { name: "React", category: "development" },
+      { name: "TypeScript", category: "development" },
+      { name: "Node.js", category: "development" },
+      { name: "PostgreSQL", category: "development" },
+      { name: "AWS", category: "development" },
+      { name: "Google Analytics", category: "analytics" },
+      { name: "Mixpanel", category: "analytics" }
     ],
     testimonial: {
       quote: "The platform Juggernot AI built has transformed our securities business. What used to be a complex system only professionals could navigate is now accessible to all our customers.",

@@ -328,6 +328,150 @@ export default function ProjectDetails() {
         </div>
       </section>
       
+      {/* Tech Stack section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">Technology Stack</h2>
+              <p className="text-gray-300">Tools and technologies used to deliver this project</p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 gap-12">
+              {/* Communication Tools */}
+              {projectDetails.techStack.some(tech => tech.category === 'communication') && (
+                <div>
+                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10">For Communication</h3>
+                  <div className="flex flex-wrap gap-6">
+                    {projectDetails.techStack
+                      .filter(tech => tech.category === 'communication')
+                      .map((tech, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 10 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
+                          className="flex items-center gap-3 bg-card/10 p-3 rounded-lg border border-white/10"
+                        >
+                          {tech.logo ? (
+                            <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
+                          ) : (
+                            <div className="w-6 h-6 bg-card/50 rounded-md flex items-center justify-center text-xs font-bold">
+                              {tech.name.charAt(0)}
+                            </div>
+                          )}
+                          <span>{tech.name}</span>
+                        </motion.div>
+                      ))
+                    }
+                  </div>
+                </div>
+              )}
+              
+              {/* Design Tools */}
+              {projectDetails.techStack.some(tech => tech.category === 'design') && (
+                <div>
+                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10">For Design</h3>
+                  <div className="flex flex-wrap gap-6">
+                    {projectDetails.techStack
+                      .filter(tech => tech.category === 'design')
+                      .map((tech, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 10 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
+                          className="flex items-center gap-3 bg-card/10 p-3 rounded-lg border border-white/10"
+                        >
+                          {tech.logo ? (
+                            <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
+                          ) : (
+                            <div className="w-6 h-6 bg-card/50 rounded-md flex items-center justify-center text-xs font-bold">
+                              {tech.name.charAt(0)}
+                            </div>
+                          )}
+                          <span>{tech.name}</span>
+                        </motion.div>
+                      ))
+                    }
+                  </div>
+                </div>
+              )}
+              
+              {/* Development Tools */}
+              {projectDetails.techStack.some(tech => tech.category === 'development') && (
+                <div>
+                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10">For Development</h3>
+                  <div className="flex flex-wrap gap-6">
+                    {projectDetails.techStack
+                      .filter(tech => tech.category === 'development')
+                      .map((tech, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 10 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
+                          className="flex items-center gap-3 bg-card/10 p-3 rounded-lg border border-white/10"
+                        >
+                          {tech.logo ? (
+                            <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
+                          ) : (
+                            <div className="w-6 h-6 bg-card/50 rounded-md flex items-center justify-center text-xs font-bold">
+                              {tech.name.charAt(0)}
+                            </div>
+                          )}
+                          <span>{tech.name}</span>
+                        </motion.div>
+                      ))
+                    }
+                  </div>
+                </div>
+              )}
+              
+              {/* Analytics Tools */}
+              {projectDetails.techStack.some(tech => tech.category === 'analytics') && (
+                <div>
+                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10">For Analytics</h3>
+                  <div className="flex flex-wrap gap-6">
+                    {projectDetails.techStack
+                      .filter(tech => tech.category === 'analytics')
+                      .map((tech, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 10 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
+                          className="flex items-center gap-3 bg-card/10 p-3 rounded-lg border border-white/10"
+                        >
+                          {tech.logo ? (
+                            <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
+                          ) : (
+                            <div className="w-6 h-6 bg-card/50 rounded-md flex items-center justify-center text-xs font-bold">
+                              {tech.name.charAt(0)}
+                            </div>
+                          )}
+                          <span>{tech.name}</span>
+                        </motion.div>
+                      ))
+                    }
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Testimonial section */}
       {projectDetails.testimonial && (
         <section className="py-20 bg-background">
