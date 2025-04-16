@@ -18,7 +18,7 @@ export const projectsData: Project[] = [
     title: "ReplyRocket AI",
     category: "AI Agent",
     description: "Automated Twitter engagement with brand-matching AI responses that increased engagement by 5.3x.",
-    image: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=360&h=360&q=80",
+    image: "/images/replyrocket.webp",
     icon: [
       React.createElement("circle", { key: 1, cx: "200", cy: "150", r: "120", fill: "#4B0082", opacity: "0.1" }),
       React.createElement("path", { 
@@ -52,7 +52,7 @@ export const projectsData: Project[] = [
     title: "Agent Ari",
     category: "AI Career Assistant",
     description: "AI job seeking assistant that increases interview rates by 3.2x through personalized applications.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=360&h=360&q=80",
+    image: "/images/agent-ari.webp",
     icon: [
       React.createElement("rect", { key: 1, x: "80", y: "80", width: "240", height: "140", rx: "10", fill: "#4B0082", opacity: "0.1" }),
       React.createElement("path", { 
@@ -79,7 +79,7 @@ export const projectsData: Project[] = [
     title: "Agent Lav",
     category: "AI Social Media",
     description: "Cross-platform social media manager that increased engagement by 4.7x across 7 platforms.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=360&h=360&q=80",
+    image: "/images/agent-lav.webp",
     icon: [
       React.createElement("circle", { key: 1, cx: "200", cy: "150", r: "100", fill: "#4B0082", opacity: "0.1" }),
       React.createElement("circle", { key: 2, cx: "150", cy: "150", r: "30", fill: "#6C5CE7", opacity: "0.3" }),
@@ -101,7 +101,7 @@ export const projectsData: Project[] = [
     title: "Agent Malcom",
     category: "AI Travel Guide",
     description: "Personalized city guide with 93% recommendation relevance for travel, dining, and activities.",
-    image: "https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=360&h=360&q=80",
+    image: "/images/agent-malcom.webp",
     icon: [
       React.createElement("rect", { key: 1, x: "100", y: "70", width: "200", height: "160", rx: "15", fill: "#4B0082", opacity: "0.1" }),
       React.createElement("circle", { key: 2, cx: "200", cy: "125", r: "40", fill: "#6C5CE7", opacity: "0.3" }),
@@ -123,7 +123,7 @@ export const projectsData: Project[] = [
     title: "Omnycomm",
     category: "E-commerce Platform",
     description: "UAE-focused e-commerce platform that increased merchant conversions by 45%.",
-    image: "https://images.unsplash.com/photo-1556742031-c6961e8560b0?w=360&h=360&q=80",
+    image: "/images/omnycomm.webp",
     icon: [
       React.createElement("rect", { key: 1, x: "80", y: "80", width: "240", height: "140", rx: "10", fill: "#4B0082", opacity: "0.1" }),
       React.createElement("rect", { key: 2, x: "120", y: "110", width: "60", height: "80", rx: "5", fill: "#6C5CE7", opacity: "0.3" }),
@@ -150,7 +150,7 @@ export const projectsData: Project[] = [
     title: "INAAM Loyalty",
     category: "Customer Loyalty",
     description: "Unified rewards platform that increased merchant retention by 27% across 10K+ businesses.",
-    image: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=360&h=360&q=80",
+    image: "/images/inaam.webp",
     icon: [
       React.createElement("rect", { key: 1, x: "100", y: "100", width: "200", height: "100", rx: "50", fill: "#4B0082", opacity: "0.1" }),
       React.createElement("path", { 
@@ -179,7 +179,7 @@ export const projectsData: Project[] = [
     title: "Nyuyu Style Guide",
     category: "Beauty & Fashion",
     description: "Digital lookbook that connected users with local beauty services with 85% booking conversion.",
-    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=360&h=360&q=80",
+    image: "/images/nyuyu.webp",
     icon: [
       React.createElement("circle", { key: 1, cx: "200", cy: "150", r: "100", fill: "#4B0082", opacity: "0.1" }),
       React.createElement("path", { 
@@ -208,7 +208,7 @@ export const projectsData: Project[] = [
     title: "Verizon BlueJeans",
     category: "Enterprise Communication",
     description: "Secure video platform with 99.99% uptime that increased meeting efficiency by 40%.",
-    image: "https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=360&h=360&q=80",
+    image: "/images/verizon-bluejeans.webp",
     icon: [
       React.createElement("rect", { key: 1, x: "100", y: "100", width: "200", height: "120", rx: "10", fill: "#4B0082", opacity: "0.1" }),
       React.createElement("rect", { key: 2, x: "120", y: "130", width: "160", height: "60", rx: "5", fill: "#6C5CE7", opacity: "0.3" }),
@@ -225,7 +225,7 @@ export const projectsData: Project[] = [
     title: "EsDee Sportswear",
     category: "E-commerce",
     description: "Immersive sportswear shopping experience that reduced returns by 65% with virtual try-on.",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=360&h=360&q=80",
+    image: "/images/esdee.webp",
     icon: [
       React.createElement("rect", { key: 1, x: "120", y: "80", width: "160", height: "220", rx: "10", fill: "#4B0082", opacity: "0.1" }),
       React.createElement("rect", { key: 2, x: "140", y: "100", width: "120", height: "100", rx: "5", fill: "#6C5CE7", opacity: "0.3" }),
