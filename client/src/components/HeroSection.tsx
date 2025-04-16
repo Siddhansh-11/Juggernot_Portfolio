@@ -18,7 +18,7 @@ export default function HeroSection() {
       >
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-            I Empower People & Businesses with{" "}
+            Empowering People & Businesses with{" "}
             <span className="gradient-text">Advanced AI Solutions</span>
           </h1>
 
