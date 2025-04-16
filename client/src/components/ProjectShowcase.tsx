@@ -41,7 +41,7 @@ export default function ProjectShowcase() {
 
   return (
     <section id="projects" className="py-20 bg-background relative">
-      <div className="absolute top-0 right-0 w-full h-full grid-lines opacity-70"></div>
+      <div className="absolute top-0 right-0 w-full h-full grid-lines opacity-50"></div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
