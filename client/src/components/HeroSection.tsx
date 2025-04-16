@@ -14,9 +14,9 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="container mx-auto px-6 relative z-10"
+        className="container mx-auto px-6 relative z-10 text-center"
       >
-        <div className="max-w-xl">
+        <div className="max-w-2xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
             AI Agents, built for{" "}
             <span className="gradient-text">speed, scale, and quality</span>
@@ -27,19 +27,12 @@ export default function HeroSection() {
             support, so your business scales faster with precision.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex justify-center">
             <Button
               asChild
               className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-medium text-center"
             >
               <a href="#contact">Get started</a>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="border border-white/20 hover:border-accent/50 hover:bg-accent/5 text-white px-8 py-3 rounded-lg font-medium text-center"
-            >
-              <a href="#projects">View our work</a>
             </Button>
           </div>
         </div>
