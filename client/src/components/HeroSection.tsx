@@ -17,11 +17,6 @@ export default function HeroSection() {
         className="container mx-auto px-6 relative z-10 text-center"
       >
         <div className="max-w-2xl mx-auto">
-          <div className="mb-2 text-center">
-            <span className="inline-block text-accent bg-accent/10 px-4 py-1 rounded-full text-sm font-bold tracking-wide">
-              Juggernot AI
-            </span>
-          </div>
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-relaxed">
             Empowering People & Businesses with{" "}
             <span className="gradient-text">Advanced AI Solutions</span>
