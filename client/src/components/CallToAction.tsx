@@ -35,7 +35,7 @@ export default function CallToAction() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Get in touch
+                Get In Touch
               </a>
             </Button>
           </div>
