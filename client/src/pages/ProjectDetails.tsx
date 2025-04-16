@@ -142,7 +142,7 @@ export default function ProjectDetails() {
                 className="bg-card/20 backdrop-blur-md px-5 py-3 rounded-md border border-white/10"
               >
                 <p className="text-sm text-gray-400">{metric.label}</p>
-                <p className="text-2xl font-medium text-[#39FF14]">{metric.value}</p>
+                <p className="text-xl font-medium text-white">{metric.value}</p>
               </div>
             ))}
             
