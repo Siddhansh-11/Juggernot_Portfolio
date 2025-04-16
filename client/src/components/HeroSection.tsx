@@ -30,13 +30,12 @@ export default function HeroSection() {
           <div className="flex justify-center">
             <Button
               asChild
-              className="bg-emerald-800 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-medium text-center"
+              className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-medium text-center"
             >
               <a
                 href="https://juggernot-ai.notion.site/Juggernot-Form-1d7fe7cd64fe80f6801feae3e074a395?pvs=4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-emerald-100"
               >
                 Let's Build Together
               </a>
