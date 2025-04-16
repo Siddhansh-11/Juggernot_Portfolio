@@ -343,43 +343,7 @@ export default function ProjectDetails() {
               <p className="text-gray-300">Tools and technologies used to deliver this project</p>
             </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Communication Tools */}
-              {projectDetails.techStack.some(tech => tech.category === 'communication') && (
-                <div className="bg-card/5 p-6 rounded-lg border border-white/10">
-                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent mr-2">
-                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                    Communication
-                  </h3>
-                  <div className="space-y-4">
-                    {projectDetails.techStack
-                      .filter(tech => tech.category === 'communication')
-                      .map((tech, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="flex items-center gap-3"
-                        >
-                          {tech.logo ? (
-                            <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
-                          ) : (
-                            <div className="w-6 h-6 bg-card/50 rounded-md flex items-center justify-center text-xs font-bold">
-                              {tech.name.charAt(0)}
-                            </div>
-                          )}
-                          <span>{tech.name}</span>
-                        </motion.div>
-                      ))
-                    }
-                  </div>
-                </div>
-              )}
-              
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Design Tools */}
               {projectDetails.techStack.some(tech => tech.category === 'design') && (
                 <div className="bg-card/5 p-6 rounded-lg border border-white/10">

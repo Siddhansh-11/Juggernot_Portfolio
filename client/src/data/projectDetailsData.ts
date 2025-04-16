@@ -37,7 +37,7 @@ export interface ProjectMetric {
 export interface TechStackItem {
   name: string;
   logo?: string; // URL to logo image or icon
-  category: 'communication' | 'design' | 'development' | 'analytics';
+  category: 'design' | 'development' | 'analytics';
 }
 
 export interface ProjectDetails {
@@ -111,17 +111,17 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
       }
     ],
     techStack: [
-      { name: "Slack", category: "communication" },
-      { name: "Microsoft Teams", category: "communication" },
       { name: "Figma", category: "design" },
       { name: "Adobe XD", category: "design" },
+      { name: "Sketch", category: "design" },
       { name: "React", category: "development" },
       { name: "TypeScript", category: "development" },
       { name: "Node.js", category: "development" },
       { name: "PostgreSQL", category: "development" },
       { name: "AWS", category: "development" },
       { name: "Google Analytics", category: "analytics" },
-      { name: "Mixpanel", category: "analytics" }
+      { name: "Mixpanel", category: "analytics" },
+      { name: "Amplitude", category: "analytics" }
     ],
     testimonial: {
       quote: "The platform Juggernot AI built has transformed our securities business. What used to be a complex system only professionals could navigate is now accessible to all our customers.",
