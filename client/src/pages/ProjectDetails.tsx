@@ -238,18 +238,20 @@ export default function ProjectDetails() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`flex-none rounded-lg overflow-hidden shadow-lg ${
                       screenshot.type === 'mobile' 
-                        ? 'w-[200px] md:w-[220px] bg-black/80 pt-4 pb-8 px-4' 
+                        ? 'w-[260px] md:w-[300px] bg-black/80 pt-4 pb-4 px-2 border-2 border-gray-700' 
                         : 'w-[260px] md:w-[340px]'
                     }`}
                   >
                     <div className={`
                       ${screenshot.type === 'mobile' 
-                        ? 'rounded-lg overflow-hidden mx-auto relative' 
+                        ? 'rounded-[32px] overflow-hidden mx-auto relative' 
                         : ''}
                     `}>
                       {screenshot.type === 'mobile' && (
-                        <div className="absolute top-0 left-0 right-0 flex justify-center p-1 space-x-1">
-                          <div className="w-10 h-1 bg-gray-600 rounded-full"></div>
+                        <div className="absolute top-0 left-0 right-0 flex justify-center p-2">
+                          <div className="w-24 h-6 bg-black rounded-b-xl flex items-center justify-center">
+                            <div className="w-12 h-1 bg-gray-600 rounded-full"></div>
+                          </div>
                         </div>
                       )}
                       <img 
