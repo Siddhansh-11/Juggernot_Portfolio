@@ -56,14 +56,7 @@ export default function ServicesSection() {
               
               <p className="text-gray-400 mb-4">{service.description}</p>
               
-              <div className="rounded-lg bg-black/50 p-4 mb-4 aspect-square flex items-center justify-center">
-                <div className="flex flex-col items-center justify-center w-full h-full border border-dashed border-gray-700 rounded-lg">
-                  <p className="text-xs text-gray-400 text-center mb-2">Image Placeholder</p>
-                  <p className="text-xs text-gray-500 italic text-center">
-                    {service.demoContent}
-                  </p>
-                </div>
-              </div>
+{/* Image placeholders hidden for now - will be added later */}
             </motion.div>
           ))}
         </div>
