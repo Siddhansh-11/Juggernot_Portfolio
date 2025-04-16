@@ -219,13 +219,13 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 9. EsDee Sportswear
+  // 9. Ess Dee Sportswear
   {
-    id: "esdee",
-    title: "EsDee Sportswear",
+    id: "ess-dee",
+    title: "Ess Dee Sportswear",
     category: "E-commerce",
     description: "Immersive sportswear shopping experience that reduced returns by 65% with virtual try-on.",
-    image: "/images/esdee.webp",
+    image: "/images/ess-dee.webp",
     icon: [
       React.createElement("rect", { key: 1, x: "120", y: "80", width: "160", height: "220", rx: "10", fill: "#4B0082", opacity: "0.1" }),
       React.createElement("rect", { key: 2, x: "140", y: "100", width: "120", height: "100", rx: "5", fill: "#6C5CE7", opacity: "0.3" }),
