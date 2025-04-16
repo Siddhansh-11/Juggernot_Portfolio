@@ -18,14 +18,13 @@ export default function HeroSection() {
       >
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-relaxed">
-            Empowering People & Businesses with{" "}
+            I Empower People & Businesses with{" "}
             <span className="gradient-text">Advanced AI Solutions</span>
           </h1>
 
           <p className="text-lg text-gray-300 mb-10 leading-relaxed">
-            Our custom LLM applications and intelligent AI agents transform how
-            you work, communicate, and solve complex problems—delivering unmatched efficiency 
-            with human-like understanding.
+            From full-stack software to LLM-powered copilots, I help companies
+            ship AI-first products that are fast, scalable, and user-friendly.
           </p>
 
           <div className="flex justify-center">
@@ -33,7 +32,13 @@ export default function HeroSection() {
               asChild
               className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-medium text-center"
             >
-              <a href="https://juggernot-ai.notion.site/Juggernot-Form-1d7fe7cd64fe80f6801feae3e074a395?pvs=4" target="_blank" rel="noopener noreferrer">Get started</a>
+              <a
+                href="https://juggernot-ai.notion.site/Juggernot-Form-1d7fe7cd64fe80f6801feae3e074a395?pvs=4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Let's Build Together
+              </a>
             </Button>
           </div>
         </div>
