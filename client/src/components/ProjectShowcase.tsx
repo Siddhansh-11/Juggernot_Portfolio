@@ -86,7 +86,7 @@ export default function ProjectShowcase() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex-none w-[320px] md:w-[360px] rounded-xl overflow-hidden bg-card border border-white/10"
+                className="flex-none w-[320px] md:w-[360px] rounded-xl overflow-hidden bg-card border border-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-accent/30"
               >
                 <div className="relative aspect-square bg-gradient-to-br from-primary/20 to-accent/10">
                   <div className="absolute inset-0 flex items-center justify-center">

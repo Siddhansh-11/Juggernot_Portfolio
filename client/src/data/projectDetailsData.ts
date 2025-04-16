@@ -501,11 +501,12 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
       { value: "10K+", label: "Participating Businesses" }
     ],
     screenshots: [
-      { url: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&h=500&q=80", alt: "Rewards Dashboard", type: "desktop" },
-      { url: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&h=500&q=80", alt: "Merchant Portal", type: "desktop" },
-      { url: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=400&h=800&q=80", alt: "Mobile Rewards Card", type: "mobile" },
-      { url: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&h=500&q=80", alt: "Analytics Dashboard", type: "desktop" },
-      { url: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=400&h=800&q=80", alt: "Mobile Redemption", type: "mobile" },
+      { url: "/images/Inaam 1.webp", alt: "INAAM Loyalty Main Dashboard", type: "desktop" },
+      { url: "/images/Inaam 2.webp", alt: "INAAM Merchant Portal", type: "desktop" },
+      { url: "/images/Inaam 3.webp", alt: "INAAM Analytics Dashboard", type: "desktop" },
+      { url: "/images/Inaam 4.webp", alt: "INAAM Mobile Rewards Card", type: "mobile" },
+      { url: "/images/Inaam 5.webp", alt: "INAAM Merchant Configuration", type: "desktop" },
+      { url: "/images/Inaam 6.webp", alt: "INAAM Mobile Redemption", type: "mobile" },
     ],
     problemDescription: "Businesses struggled with standalone loyalty programs that suffered from low engagement, while customers were frustrated by managing multiple loyalty cards and programs across different merchants.",
     painPoints: [
