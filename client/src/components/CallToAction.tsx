@@ -27,7 +27,7 @@ export default function CallToAction() {
               asChild
               className="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-semibold h-auto"
             >
-              <a href="#">Get in touch</a>
+              <a href="https://juggernot-ai.notion.site/Juggernot-Form-1d7fe7cd64fe80f6801feae3e074a395?pvs=4" target="_blank" rel="noopener noreferrer">Get in touch</a>
             </Button>
           </div>
         </div>

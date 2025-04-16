@@ -38,7 +38,7 @@ export default function HeroSection() {
               asChild
               className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-medium text-center"
             >
-              <a href="#contact">Get started</a>
+              <a href="https://juggernot-ai.notion.site/Juggernot-Form-1d7fe7cd64fe80f6801feae3e074a395?pvs=4" target="_blank" rel="noopener noreferrer">Get started</a>
             </Button>
           </div>
         </div>

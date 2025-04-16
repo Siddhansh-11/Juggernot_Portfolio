@@ -103,7 +103,7 @@ export default function Navbar() {
               size="sm"
               className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-white rounded-full"
             >
-              <a href="#contact">Get in touch</a>
+              <a href="https://juggernot-ai.notion.site/Juggernot-Form-1d7fe7cd64fe80f6801feae3e074a395?pvs=4" target="_blank" rel="noopener noreferrer">Get in touch</a>
             </Button>
           ) : (
             <Button
@@ -171,7 +171,9 @@ export default function Navbar() {
                     className="bg-accent hover:bg-accent/90 text-white w-full rounded-lg mt-4"
                   >
                     <a
-                      href="#contact"
+                      href="https://juggernot-ai.notion.site/Juggernot-Form-1d7fe7cd64fe80f6801feae3e074a395?pvs=4"
+                      target="_blank" 
+                      rel="noopener noreferrer"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Get in touch
