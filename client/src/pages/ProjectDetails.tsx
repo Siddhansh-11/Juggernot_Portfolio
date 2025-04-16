@@ -83,46 +83,45 @@ export default function ProjectDetails() {
   if (!projectDetails) {
     return (
       <div className="min-h-screen bg-background">
-        {/* Back button - consistent with other project pages */}
-        <div className="container mx-auto px-6 py-6">
-          <Button 
-            asChild 
-            variant="outline" 
-            size="sm" 
-            className="w-fit"
-          >
-            <a href="/#projects" className="inline-flex items-center">
-              <ArrowLeft size={16} className="mr-2" />
-              Back
-            </a>
-          </Button>
-        </div>
-        
-        <div className="container mx-auto px-6 py-24 text-center">
-          <h1 className="text-4xl font-bold mb-6">Project Not Found</h1>
-          <p className="text-gray-400 mb-8">The project you're looking for doesn't seem to exist.</p>
-        </div>
+        {/* Hero section for not found page */}
+        <section className="relative w-full h-[40vh] min-h-[300px] overflow-hidden bg-black">
+          {/* Background with overlay */}
+          <div className="absolute inset-0 z-0">
+            <div className="w-full h-full bg-gradient-to-br from-background via-card to-background opacity-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+          </div>
+          
+          {/* Content */}
+          <div className="container mx-auto px-6 relative z-10 h-full flex flex-col justify-between">
+            {/* Back button - layered over the image for better visibility */}
+            <div className="pt-6">
+              <Button 
+                asChild 
+                variant="outline" 
+                size="sm" 
+                className="w-fit bg-black/50 hover:bg-black/70 border-white/20"
+              >
+                <a href="/#projects" className="inline-flex items-center">
+                  <ArrowLeft size={16} className="mr-2" />
+                  Back
+                </a>
+              </Button>
+            </div>
+            
+            <div className="pb-16 text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Project Not Found</h1>
+              <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+                The project you're looking for doesn't seem to exist.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Back button - positioned outside hero section for better spacing */}
-      <div className="container mx-auto px-6 py-6">
-        <Button 
-          asChild 
-          variant="outline" 
-          size="sm" 
-          className="w-fit"
-        >
-          <a href="/#projects" className="inline-flex items-center">
-            <ArrowLeft size={16} className="mr-2" />
-            Back
-          </a>
-        </Button>
-      </div>
-      
       {/* Hero section */}
       <section className="relative w-full h-[60vh] min-h-[500px] overflow-hidden bg-black">
         {/* Cover image with overlay */}
@@ -136,61 +135,77 @@ export default function ProjectDetails() {
         </div>
         
         {/* Content */}
-        <div className="container mx-auto px-6 relative z-10 h-full flex flex-col justify-end pb-16">
-          
-          <div className="mb-4">
-            <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
-              {projectDetails.category}
-            </span>
+        <div className="container mx-auto px-6 relative z-10 h-full flex flex-col justify-between">
+          {/* Back button - layered over the image for better visibility */}
+          <div className="pt-6">
+            <Button 
+              asChild 
+              variant="outline" 
+              size="sm" 
+              className="w-fit bg-black/50 hover:bg-black/70 border-white/20"
+            >
+              <a href="/#projects" className="inline-flex items-center">
+                <ArrowLeft size={16} className="mr-2" />
+                Back
+              </a>
+            </Button>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            {projectDetails.title}
-          </h1>
-          
-          <p className="text-gray-300 text-lg mb-8 max-w-2xl">
-            {projectDetails.description}
-          </p>
-          
-          <div className="flex flex-wrap gap-8">
-            <div className="bg-card/20 backdrop-blur-md px-5 py-3 rounded-md border border-white/10">
-              <p className="text-sm text-gray-400">Project Timeline</p>
-              <p className="text-xl font-medium">{projectDetails.date}</p>
+          <div className="pb-16">
+            <div className="mb-4">
+              <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
+                {projectDetails.category}
+              </span>
             </div>
             
-            {projectDetails.metrics.map((metric, index) => (
-              <div 
-                key={index} 
-                className="bg-card/20 backdrop-blur-md px-5 py-3 rounded-md border border-white/10"
-              >
-                <p className="text-sm text-gray-400">{metric.label}</p>
-                <p className="text-xl font-medium text-white">{metric.value}</p>
-              </div>
-            ))}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              {projectDetails.title}
+            </h1>
             
-            {/* External Link Button (if available) */}
-            {projectDetails.externalLink && (
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
-                className="bg-accent/20 hover:bg-accent/30 border border-white/10"
-              >
-                <a 
-                  href={projectDetails.externalLink.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2"
+            <p className="text-gray-300 text-lg mb-8 max-w-2xl">
+              {projectDetails.description}
+            </p>
+            
+            <div className="flex flex-wrap gap-8">
+              <div className="bg-card/20 backdrop-blur-md px-5 py-3 rounded-md border border-white/10">
+                <p className="text-sm text-gray-400">Project Timeline</p>
+                <p className="text-xl font-medium">{projectDetails.date}</p>
+              </div>
+              
+              {projectDetails.metrics.map((metric, index) => (
+                <div 
+                  key={index} 
+                  className="bg-card/20 backdrop-blur-md px-5 py-3 rounded-md border border-white/10"
                 >
-                  {projectDetails.externalLink.type === 'web' && <Globe size={18} />}
-                  {projectDetails.externalLink.type === 'app_store' && <Smartphone size={18} />}
-                  {projectDetails.externalLink.type === 'play_store' && <Smartphone size={18} />}
-                  {projectDetails.externalLink.type === 'github' && <ExternalLink size={18} />}
-                  {projectDetails.externalLink.label}
-                  <ExternalLink size={16} />
-                </a>
-              </Button>
-            )}
+                  <p className="text-sm text-gray-400">{metric.label}</p>
+                  <p className="text-xl font-medium text-white">{metric.value}</p>
+                </div>
+              ))}
+              
+              {/* External Link Button (if available) */}
+              {projectDetails.externalLink && (
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  size="lg" 
+                  className="bg-accent/20 hover:bg-accent/30 border border-white/10"
+                >
+                  <a 
+                    href={projectDetails.externalLink.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2"
+                  >
+                    {projectDetails.externalLink.type === 'web' && <Globe size={18} />}
+                    {projectDetails.externalLink.type === 'app_store' && <Smartphone size={18} />}
+                    {projectDetails.externalLink.type === 'play_store' && <Smartphone size={18} />}
+                    {projectDetails.externalLink.type === 'github' && <ExternalLink size={18} />}
+                    {projectDetails.externalLink.label}
+                    <ExternalLink size={16} />
+                  </a>
+                </Button>
+              )}
+            </div>
           </div>
         </div>
       </section>
