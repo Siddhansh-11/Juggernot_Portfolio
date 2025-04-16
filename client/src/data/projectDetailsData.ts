@@ -570,7 +570,7 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     title: "Nyuyu Style Guide",
     category: "Beauty & Fashion",
     description: "Digital lookbook connecting users with local beauty services, products and styles.",
-    coverImage: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1600&h=900&q=80", // Placeholder
+    coverImage: "/images/nyuyu.webp",
     date: "2022 - 2023",
     metrics: [
       { value: "85%", label: "Salon Booking Conversion" },
@@ -643,7 +643,7 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     title: "Verizon BlueJeans",
     category: "Enterprise Communication",
     description: "Enterprise-grade video conferencing and collaboration platform with advanced security.",
-    coverImage: "https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=1600&h=900&q=80", // Placeholder
+    coverImage: "/images/verizon-bluejeans.webp",
     date: "2021 - 2022",
     metrics: [
       { value: "99.99%", label: "Uptime Reliability" },
@@ -717,7 +717,7 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     title: "EsDee Sportswear",
     category: "E-commerce",
     description: "Performance sportswear brand with immersive digital shopping experience.",
-    coverImage: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1600&h=900&q=80", // Placeholder
+    coverImage: "/images/ess-dee.webp",
     date: "2021",
     metrics: [
       { value: "2.5x", label: "Conversion Rate" },
