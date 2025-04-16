@@ -142,52 +142,54 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     title: "ReplyRocket AI",
     category: "AI Agent",
     description: "An intelligent AI agent that automates Twitter engagement while maintaining authentic brand voice.",
-    coverImage: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=1600&h=900&q=80", // Placeholder
+    coverImage: "/images/replyrocket.webp",
     date: "2024",
     metrics: [
       { value: "5.3x", label: "Engagement Increase" },
       { value: "73%", label: "Time Saved on Social" },
       { value: "47%", label: "Follower Growth" }
     ],
+    externalLink: {
+      url: "https://www.replyrocket.ai",
+      label: "Visit Website",
+      type: "web"
+    },
+    videoUrl: "https://www.youtube.com/embed/video_id_here",
     screenshots: [
-      { url: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=800&h=500&q=80", alt: "ReplyRocket Dashboard", type: "desktop" },
-      { url: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=800&h=500&q=80", alt: "AI Response Settings", type: "desktop" },
-      { url: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=800&q=80", alt: "Mobile Dashboard", type: "mobile" },
-      { url: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=800&h=500&q=80", alt: "Analytics Dashboard", type: "desktop" },
-      { url: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=800&q=80", alt: "Mobile Notifications", type: "mobile" },
+      { url: "/images/ReplyRocket_JNT.webp", alt: "ReplyRocket Dashboard", type: "desktop" },
+      { url: "/images/replyrocket.webp", alt: "AI Response Settings", type: "desktop" },
+      { url: "/images/replyrocket.webp", alt: "Mobile Dashboard", type: "mobile" },
+      { url: "/images/replyrocket.webp", alt: "Analytics Dashboard", type: "desktop" },
+      { url: "/images/replyrocket.webp", alt: "Mobile Notifications", type: "mobile" },
     ],
-    problemDescription: "Businesses struggle to consistently engage with their Twitter audience, missing valuable opportunities for connection while spending excessive time managing social interactions manually.",
+    problemDescription: "Businesses struggle to consistently engage with their Twitter audience, missing valuable opportunities for connection, lead generation, and support. Manual handling of customer queries, influencer tracking, and product marketing slows down teams and makes it hard to scale authentic interactions.",
     painPoints: [
       {
         title: "Response Delays",
-        description: "Brands taking too long to respond to mentions and messages, leading to decreased engagement and missed opportunities."
+        description: "Brands taking too long to respond to mentions and complaints, hurting retention and leaving customers feeling ignored."
       },
       {
-        title: "Inconsistent Voice",
-        description: "Multiple team members responding differently, creating an inconsistent brand voice and customer experience."
+        title: "Missed Marketing Opportunities",
+        description: "Companies fail to join relevant trending conversations where their product could shine, resulting in lost inbounds."
       },
       {
-        title: "Scaling Limitations",
-        description: "Growing accounts unable to manually respond to increasing volumes of interactions while maintaining quality."
+        title: "Lack of Proactive Networking",
+        description: "It's difficult to track and engage with high-value individuals consistently at scale."
       }
     ],
-    solutionDescription: "We developed ReplyRocket AI, a sophisticated agent that intelligently engages with Twitter audiences in real-time while preserving the brand's authentic voice and personality.",
+    solutionDescription: "We developed ReplyRocket AI — a fully autonomous Twitter agent that handles customer support, product marketing, and proactive networking in real time. It mirrors your brand's tone, prioritizes responses intelligently, and boosts visibility by engaging first with your target audience.",
     solutions: [
       {
-        title: "Voice-Matched AI Responses",
-        description: "Advanced machine learning algorithm that studies your existing content to perfectly match tone, style, and brand personality in every interaction."
+        title: "Instant AI-Powered Replies",
+        description: "Fully automated, lightning-fast responses to support mentions and DMs — ensuring your customers feel heard, instantly."
       },
       {
-        title: "Smart Prioritization",
-        description: "Intelligent triage system that identifies high-value engagement opportunities and prioritizes responses based on user influence and sentiment."
+        title: "Contextual Product Positioning",
+        description: "The agent intelligently inserts your product into relevant Twitter conversations, helping drive inbounds with zero manual effort."
       },
       {
-        title: "Human-in-the-Loop Controls",
-        description: "Customizable approval workflows for different interaction types, allowing brands to maintain oversight while automating routine engagements."
-      },
-      {
-        title: "Performance Analytics",
-        description: "Comprehensive dashboard tracking engagement metrics, sentiment analysis, and growth statistics to continuously optimize performance."
+        title: "Influencer & Prospect Tracking",
+        description: "Track your target audience and ensure you're the first to engage with their posts, building relationships that convert to partnerships and sales."
       }
     ],
     techStack: [
