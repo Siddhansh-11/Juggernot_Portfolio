@@ -71,7 +71,7 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     title: "KapitalBank Securities Platform",
     category: "Financial",
     description: "Built a securities product with AI-powered analysis to grow 18x in 2 years.",
-    coverImage: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=1600&h=900&q=80", // Placeholder
+    coverImage: "/images/kapitalbank.webp", // Using project card image
     date: "2023 - 2024",
     metrics: [
       { value: "18x", label: "Growth in 2 years" },
@@ -203,7 +203,7 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     title: "Agent Ari",
     category: "AI Career Assistant",
     description: "An AI-powered job seeking assistant that personalizes applications and tracks opportunities.",
-    coverImage: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1600&h=900&q=80", // Placeholder
+    coverImage: "/images/agent-ari.webp",
     date: "2024 - In Development",
     metrics: [
       { value: "70%", label: "Time Saved" },
@@ -276,7 +276,7 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     title: "Agent Lav",
     category: "AI Social Media",
     description: "Comprehensive AI social media manager that works across all major platforms.",
-    coverImage: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1600&h=900&q=80", // Placeholder
+    coverImage: "/images/agent-lav.webp",
     date: "2023 - 2024",
     metrics: [
       { value: "67%", label: "Content Creation Speed" },
@@ -350,7 +350,7 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     title: "Agent Malcom",
     category: "AI Travel Guide",
     description: "Personalized AI city guide for travel, activities, and dining recommendations.",
-    coverImage: "https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=1600&h=900&q=80", // Placeholder
+    coverImage: "/images/agent-malcom.webp",
     date: "2023",
     metrics: [
       { value: "93%", label: "Recommendation Relevance" },
@@ -423,7 +423,7 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     title: "Omnycomm",
     category: "E-commerce Platform",
     description: "UAE-focused e-commerce platform tailored for Middle Eastern markets and consumers.",
-    coverImage: "https://images.unsplash.com/photo-1556742031-c6961e8560b0?w=1600&h=900&q=80", // Placeholder
+    coverImage: "/images/omnycomm.webp",
     date: "2022 - 2023",
     metrics: [
       { value: "15K+", label: "Active Merchants" },
@@ -497,7 +497,7 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     title: "INAAM Loyalty",
     category: "Customer Loyalty",
     description: "Cross-merchant loyalty platform unifying rewards across businesses and brands.",
-    coverImage: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=1600&h=900&q=80", // Placeholder
+    coverImage: "/images/inaam.webp",
     date: "2022",
     metrics: [
       { value: "27%", label: "Customer Retention Increase" },
