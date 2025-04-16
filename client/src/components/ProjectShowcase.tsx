@@ -95,6 +95,9 @@ export default function ProjectShowcase() {
                         src={project.image} 
                         alt={project.title}
                         className="w-full h-full object-cover"
+                        onError={() => {
+                          console.error(`Failed to load image: ${project.image}`);
+                        }}
                       />
                     ) : (
                       <svg
