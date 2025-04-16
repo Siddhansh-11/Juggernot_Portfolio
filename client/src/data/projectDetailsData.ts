@@ -154,7 +154,7 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
       label: "Visit Website",
       type: "web"
     },
-    videoUrl: "/videos/replyrocket.mp4",
+    videoUrl: "/videos/ReplyRocket_VideoDemo_JNT.mp4",
     screenshots: [],
     problemDescription: "Businesses struggle to consistently engage with their Twitter audience, missing valuable opportunities for connection, lead generation, and support. Manual handling of customer queries, influencer tracking, and product marketing slows down teams and makes it hard to scale authentic interactions.",
     painPoints: [
