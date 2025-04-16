@@ -22,14 +22,15 @@ export default function HeroSection() {
               Juggernot AI
             </span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-relaxed">
             Empowering People & Businesses with{" "}
             <span className="gradient-text">Advanced AI Solutions</span>
           </h1>
 
-          <p className="text-lg text-gray-300 mb-10">
+          <p className="text-lg text-gray-300 mb-10 leading-relaxed">
             Our custom LLM applications and intelligent AI agents transform how
-            you work, communicate, and solve complex problems.
+            you work, communicate, and solve complex problems—delivering unmatched efficiency 
+            with human-like understanding.
           </p>
 
           <div className="flex justify-center">

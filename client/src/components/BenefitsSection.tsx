@@ -13,7 +13,7 @@ export default function BenefitsSection() {
       >
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Maximum Efficiency</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Our AI agents work around the clock, handling repetitive tasks and complex queries 
             with precision and speed that traditional solutions can't match.
           </p>
@@ -35,7 +35,7 @@ export default function BenefitsSection() {
                 </div>
                 <h3 className="text-xl font-bold">{benefit.title}</h3>
               </div>
-              <p className="text-gray-400">{benefit.description}</p>
+              <p className="text-gray-400 leading-relaxed">{benefit.description}</p>
             </motion.div>
           ))}
         </div>
