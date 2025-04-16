@@ -36,9 +36,16 @@ export default function Navbar() {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/">
-            <a className="text-2xl font-bold">
-              <span className="text-white">Juggernot</span>
-              <span className="text-accent">AI</span>
+            <a className="flex items-center gap-2">
+              <img 
+                src="/images/navbar_juggernot.webp" 
+                alt="Juggernot AI Logo" 
+                className="h-10 w-auto" 
+              />
+              <span className="text-xl font-bold">
+                <span className="text-white">Juggernot</span>
+                <span className="text-accent">AI</span>
+              </span>
             </a>
           </Link>
         </div>

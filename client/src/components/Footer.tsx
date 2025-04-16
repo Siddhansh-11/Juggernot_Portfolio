@@ -16,9 +16,16 @@ export default function Footer() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <div className="lg:col-span-2">
-            <div className="text-2xl font-bold mb-4">
-              <span className="text-white">Juggernot</span>
-              <span className="text-accent">AI</span>
+            <div className="flex items-center gap-2 mb-4">
+              <img 
+                src="/images/favicon_juggernot.webp" 
+                alt="Juggernot AI Logo" 
+                className="h-8 w-auto" 
+              />
+              <span className="text-xl font-bold">
+                <span className="text-white">Juggernot</span>
+                <span className="text-accent">AI</span>
+              </span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Transforming businesses with AI-powered solutions for customer support,
