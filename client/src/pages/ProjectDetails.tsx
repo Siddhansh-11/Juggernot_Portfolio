@@ -229,7 +229,7 @@ export default function ProjectDetails() {
               onMouseUp={handleMouseUp}
               onMouseMove={handleMouseMove}
             >
-              <div className="inline-flex space-x-6">
+              <div className="inline-flex space-x-4">
                 {projectDetails.screenshots.map((screenshot, index) => (
                   <motion.div
                     key={index}
@@ -238,8 +238,8 @@ export default function ProjectDetails() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`flex-none rounded-lg overflow-hidden shadow-lg ${
                       screenshot.type === 'mobile' 
-                        ? 'w-[240px] md:w-[260px] bg-black/80 pt-4 pb-8 px-4' 
-                        : 'w-[320px] md:w-[420px]'
+                        ? 'w-[200px] md:w-[220px] bg-black/80 pt-4 pb-8 px-4' 
+                        : 'w-[260px] md:w-[340px]'
                     }`}
                   >
                     <div className={`
