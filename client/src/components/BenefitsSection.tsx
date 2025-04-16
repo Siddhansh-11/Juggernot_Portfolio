@@ -12,10 +12,10 @@ export default function BenefitsSection() {
         className="container mx-auto px-6"
       >
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Maximize Efficiency</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Maximum Efficiency</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Optimize workflows, drive faster issue resolutions, and achieve
-            measurable cost reductions
+            Our AI agents work around the clock, handling repetitive tasks and complex queries 
+            with precision and speed that traditional solutions can't match.
           </p>
         </div>
 
