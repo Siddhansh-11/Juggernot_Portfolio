@@ -50,10 +50,10 @@ export default function ProjectShowcase() {
         transition={{ duration: 0.8 }}
         className="container mx-auto px-6 mb-12"
       >
-        <h2 className="text-3xl font-bold mb-3">My Projects</h2>
+        <h2 className="text-3xl font-bold mb-3">Our Projects</h2>
         <p className="text-gray-400 max-w-2xl">
-          Discover how I've helped leading companies transform their operations
-          with our solutions.
+          Discover how we've helped leading companies transform their operations
+          with our AI solutions.
         </p>
       </motion.div>
 

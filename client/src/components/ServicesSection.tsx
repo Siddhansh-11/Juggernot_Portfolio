@@ -14,7 +14,7 @@ export default function ServicesSection() {
       >
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            I can build competent <span className="gradient-text">AI agents</span> and LLM powered applications for you
+            The only <span className="gradient-text">AI toolbox</span> you'll ever need
           </h2>
           <p className="text-gray-300">
             From conversational AI agents to co-pilots, unlock endless possibilities to transform your business
@@ -32,7 +32,7 @@ export default function ServicesSection() {
           </span>
           <span className="bg-card border border-border/20 px-5 py-2 rounded-full text-sm font-medium flex items-center gap-2">
             <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-            Easy To Monitor
+            Easy Monitoring
           </span>
         </div>
 
