@@ -47,10 +47,10 @@ export default function ProjectShowcase() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="container mx-auto px-6 mb-12"
+        className="container mx-auto px-6 mb-12 text-center"
       >
         <h2 className="text-3xl font-bold mb-3">My Projects</h2>
-        <p className="text-gray-400 max-w-2xl">
+        <p className="text-gray-400 max-w-2xl mx-auto">
           Explore how I've helped leading companies and people transform how
           they work.
         </p>
