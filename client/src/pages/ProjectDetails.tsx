@@ -151,14 +151,8 @@ export default function ProjectDetails() {
             </Button>
           </div>
           
-          <div className="pb-16">
-            <div className="mb-4">
-              <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
-                {projectDetails.category}
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <div className="pb-16">            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               {projectDetails.title}
             </h1>
             
