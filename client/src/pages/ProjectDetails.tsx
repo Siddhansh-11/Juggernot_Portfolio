@@ -230,21 +230,42 @@ export default function ProjectDetails() {
               onMouseMove={handleMouseMove}
             >
               <div className="inline-flex space-x-4">
-                {projectDetails.screenshots.map((screenshot, index) => (
-                  <motion.img 
-                    key={index}
-                    src={screenshot.url} 
-                    alt={screenshot.alt}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`flex-none rounded-lg shadow-lg ${
-                      screenshot.type === 'mobile' 
-                        ? 'w-[260px] md:w-[300px]' 
-                        : 'w-[260px] md:w-[340px]'
-                    }`}
-                  />
-                ))}
+                {/* Filter out any non-existent or broken images */}
+                {projectDetails.id === 'inaam' ? (
+                  // Special handling for INAAM project - exclude the partially visible mobile image
+                  projectDetails.screenshots.filter((_, index) => index > 0).map((screenshot, index) => (
+                    <motion.img 
+                      key={index}
+                      src={screenshot.url} 
+                      alt={screenshot.alt}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className={`flex-none rounded-lg shadow-lg ${
+                        screenshot.type === 'mobile' 
+                          ? 'w-[260px] md:w-[300px]' 
+                          : 'w-[260px] md:w-[340px]'
+                      }`}
+                    />
+                  ))
+                ) : (
+                  // Standard handling for other projects
+                  projectDetails.screenshots.map((screenshot, index) => (
+                    <motion.img 
+                      key={index}
+                      src={screenshot.url} 
+                      alt={screenshot.alt}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className={`flex-none rounded-lg shadow-lg ${
+                        screenshot.type === 'mobile' 
+                          ? 'w-[260px] md:w-[300px]' 
+                          : 'w-[260px] md:w-[340px]'
+                      }`}
+                    />
+                  ))
+                )}
               </div>
             </div>
           </div>
