@@ -24,7 +24,7 @@ export default function ServicesSection() {
         <div className="flex flex-wrap gap-6 justify-center mb-8">
           <span className="bg-card border border-border/20 px-5 py-2 rounded-full text-sm font-medium flex items-center gap-2">
             <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-            No-Code
+            Highly Intelligent
           </span>
           <span className="bg-card border border-border/20 px-5 py-2 rounded-full text-sm font-medium flex items-center gap-2">
             <span className="w-2 h-2 bg-green-500 rounded-full"></span>
@@ -32,7 +32,7 @@ export default function ServicesSection() {
           </span>
           <span className="bg-card border border-border/20 px-5 py-2 rounded-full text-sm font-medium flex items-center gap-2">
             <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-            Powerful Analytics
+            Easy Monitoring
           </span>
         </div>
 
