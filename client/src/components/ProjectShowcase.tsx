@@ -87,8 +87,14 @@ export default function ProjectShowcase() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex-none w-[320px] md:w-[360px] rounded-xl overflow-hidden bg-card border border-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-accent/30"
+                className="flex-none w-[320px] md:w-[360px] rounded-xl overflow-hidden bg-card border border-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-accent/30 group relative"
               >
+                <a 
+                  href={`/projects/${project.id || project.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="absolute inset-0 z-10"
+                  aria-label={`View ${project.title} case study`}
+                ></a>
+                
                 <div className="relative aspect-square bg-gradient-to-br from-primary/20 to-accent/10">
                   <div className="absolute inset-0 flex items-center justify-center">
                     {project.image ? (
@@ -116,28 +122,22 @@ export default function ProjectShowcase() {
 
                 <div className="p-6">
                   <div className="flex mb-2 gap-2 flex-wrap">
-                    <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
+                    <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full relative z-20 pointer-events-none">
                       {project.category}
                     </span>
                     {project.comingSoon && (
-                      <Badge variant="outline" className="bg-amber-500/20 text-amber-300 border-amber-500/30 flex items-center gap-1">
+                      <span className="inline-flex bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full text-xs font-medium px-3 py-1 items-center gap-1 relative z-20 pointer-events-none">
                         <Clock size={12} />
                         <span>Coming Soon</span>
-                      </Badge>
+                      </span>
                     )}
                   </div>
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-gray-400 mb-4">{project.description}</p>
-                  <Button
-                    asChild
-                    variant="link"
-                    className="p-0 h-auto text-accent"
-                  >
-                    <a href={`/projects/${project.id || project.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center">
-                      View case study
-                      <ArrowRight size={16} className="ml-1" />
-                    </a>
-                  </Button>
+                  <span className="inline-flex items-center text-accent relative z-20 pointer-events-none group-hover:underline">
+                    View case study
+                    <ArrowRight size={16} className="ml-1" />
+                  </span>
                 </div>
               </motion.div>
             ))}

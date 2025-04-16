@@ -75,9 +75,19 @@ export default function ProjectDetails() {
     screenshotScrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
-  // Don't render testimonial or screenshots for Agent Ari project
+  // Hide testimonial for Agent Ari project
   const shouldShowTestimonial = projectDetails?.testimonial && projectId !== "agent-ari";
-  const shouldShowScreenshots = projectDetails?.screenshots && projectDetails.screenshots.length > 0 && projectId !== "agent-ari";
+  
+  // Get the corresponding project data to check if it's coming soon
+  const isComingSoon = projectDetails?.category === "Coming Soon";
+  
+  // Hide screenshots for: 1) Agent Ari project, 2) "Coming Soon" projects, 3) Omnycomm project
+  const shouldShowScreenshots = 
+    projectDetails?.screenshots && 
+    projectDetails.screenshots.length > 0 && 
+    projectId !== "agent-ari" && 
+    !isComingSoon && 
+    projectId !== "omnycomm";
 
   // Render not found if project doesn't exist
   if (!projectDetails) {
@@ -242,8 +252,8 @@ export default function ProjectDetails() {
         </section>
       )}
       
-      {/* Screenshots section - for projects other than OmnyComm */}
-      {shouldShowScreenshots && projectDetails.id !== 'omnycomm' && (
+      {/* Screenshots section */}
+      {shouldShowScreenshots && (
         <section className="py-20 bg-card/5">
           <div className="container mx-auto px-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-8">Project Gallery</h2>
@@ -272,22 +282,6 @@ export default function ProjectDetails() {
                     }`}
                   />
                 ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-      
-      {/* Temporary placeholder for OmnyComm project */}
-      {shouldShowScreenshots && projectDetails.id === 'omnycomm' && (
-        <section className="py-20 bg-card/5">
-          <div className="container mx-auto px-6">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8">Project Gallery</h2>
-              <div className="bg-card/10 p-6 rounded-lg border border-white/10">
-                <p className="text-gray-400 italic">
-                  Gallery images will be added soon. Check back later for a complete showcase of the OmnyComm project.
-                </p>
               </div>
             </div>
           </div>
