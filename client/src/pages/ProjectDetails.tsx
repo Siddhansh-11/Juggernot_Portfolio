@@ -75,6 +75,10 @@ export default function ProjectDetails() {
     screenshotScrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
+  // Don't render testimonial or screenshots for Agent Ari project
+  const shouldShowTestimonial = projectDetails?.testimonial && projectId !== "agent-ari";
+  const shouldShowScreenshots = projectDetails?.screenshots?.length > 0 && projectId !== "agent-ari";
+
   // Render not found if project doesn't exist
   if (!projectDetails) {
     return (
@@ -212,7 +216,7 @@ export default function ProjectDetails() {
       )}
       
       {/* Screenshots section */}
-      {projectDetails.screenshots.length > 0 && (
+      {shouldShowScreenshots && (
         <section className="py-20 bg-card/5">
           <div className="container mx-auto px-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-8">Project Gallery</h2>
@@ -343,7 +347,7 @@ export default function ProjectDetails() {
         </div>
       </section>
       
-      {/* Tech Stack section */}
+      {/* Tech Stack section - Updated with simplified design */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
@@ -358,127 +362,33 @@ export default function ProjectDetails() {
               <p className="text-gray-300">Tools and technologies used to deliver this project</p>
             </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Design Tools */}
-              {projectDetails.techStack.some(tech => tech.category === 'design') && (
-                <div className="bg-card/5 p-6 rounded-lg border border-white/10">
-                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent mr-2">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <circle cx="12" cy="12" r="6"></circle>
-                      <circle cx="12" cy="12" r="2"></circle>
-                    </svg>
-                    Design
-                  </h3>
-                  <div className="space-y-4">
-                    {projectDetails.techStack
-                      .filter(tech => tech.category === 'design')
-                      .map((tech, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="flex items-center gap-3"
-                        >
-                          {tech.logo ? (
-                            <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
-                          ) : (
-                            <div className="w-6 h-6 bg-card/50 rounded-md flex items-center justify-center text-xs font-bold">
-                              {tech.name.charAt(0)}
-                            </div>
-                          )}
-                          <span>{tech.name}</span>
-                        </motion.div>
-                      ))
-                    }
-                  </div>
-                </div>
-              )}
-              
-              {/* Development Tools */}
-              {projectDetails.techStack.some(tech => tech.category === 'development') && (
-                <div className="bg-card/5 p-6 rounded-lg border border-white/10">
-                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent mr-2">
-                      <polyline points="16 18 22 12 16 6"></polyline>
-                      <polyline points="8 6 2 12 8 18"></polyline>
-                    </svg>
-                    Development
-                  </h3>
-                  <div className="space-y-4">
-                    {projectDetails.techStack
-                      .filter(tech => tech.category === 'development')
-                      .map((tech, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="flex items-center gap-3"
-                        >
-                          {tech.logo ? (
-                            <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
-                          ) : (
-                            <div className="w-6 h-6 bg-card/50 rounded-md flex items-center justify-center text-xs font-bold">
-                              {tech.name.charAt(0)}
-                            </div>
-                          )}
-                          <span>{tech.name}</span>
-                        </motion.div>
-                      ))
-                    }
-                  </div>
-                </div>
-              )}
-              
-              {/* Analytics Tools */}
-              {projectDetails.techStack.some(tech => tech.category === 'analytics') && (
-                <div className="bg-card/5 p-6 rounded-lg border border-white/10">
-                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent mr-2">
-                      <path d="M3 3v18h18"></path>
-                      <path d="M18.4 8.64L18.4 15.52"></path>
-                      <path d="M13.2 10.24L13.2 15.52"></path>
-                      <path d="M8 12.32L8 15.52"></path>
-                    </svg>
-                    Analytics
-                  </h3>
-                  <div className="space-y-4">
-                    {projectDetails.techStack
-                      .filter(tech => tech.category === 'analytics')
-                      .map((tech, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="flex items-center gap-3"
-                        >
-                          {tech.logo ? (
-                            <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
-                          ) : (
-                            <div className="w-6 h-6 bg-card/50 rounded-md flex items-center justify-center text-xs font-bold">
-                              {tech.name.charAt(0)}
-                            </div>
-                          )}
-                          <span>{tech.name}</span>
-                        </motion.div>
-                      ))
-                    }
-                  </div>
-                </div>
-              )}
+            <div className="flex flex-wrap justify-center gap-4">
+              {projectDetails.techStack.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  className="flex items-center gap-3 bg-card/10 px-4 py-2 rounded-full"
+                >
+                  {tech.logo ? (
+                    <img src={tech.logo} alt={tech.name} className="w-5 h-5" />
+                  ) : (
+                    <div className="w-5 h-5 bg-card/50 rounded-md flex items-center justify-center text-xs font-bold">
+                      {tech.name.charAt(0)}
+                    </div>
+                  )}
+                  <span className="text-sm">{tech.name}</span>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
       </section>
       
-      {/* Testimonial section */}
-      {projectDetails.testimonial && (
+      {/* Testimonial section - hidden for Agent Ari project */}
+      {shouldShowTestimonial && (
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <motion.div
@@ -488,45 +398,23 @@ export default function ProjectDetails() {
               transition={{ duration: 0.8 }}
               className="max-w-4xl mx-auto bg-card/10 p-8 md:p-12 rounded-xl border border-white/10"
             >
-              <div className="flex flex-col items-center">
-                <div className="relative mb-8">
-                  <svg
-                    className="absolute -top-8 -left-8 text-accent opacity-20"
-                    width="48"
-                    height="48"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.626.41-2.032.303-.406.7-.754 1.19-1.05.495-.297 1.05-.536 1.66-.716.61-.18 1.19-.274 1.73-.274.78 0 1.5.21 2.16.63.66.42 1.18 1.02 1.58 1.8.4.78.6 1.71.6 2.77 0 .97-.22 1.81-.66 2.52-.44.71-.98 1.27-1.62 1.67-.72.46-1.45.75-2.28.89-1.1.19-2.12.14-3.06-.14-.88-.25-1.63-.66-2.24-1.22-.61-.56-1.05-1.22-1.32-1.97l1.08-.44c.17.42.42.81.75 1.17.33.36.74.64 1.23.84.49.2 1.05.32 1.68.32.42 0 .83-.08 1.24-.24.41-.16.78-.39 1.1-.69.33-.3.6-.66.8-1.07.2-.41.3-.87.3-1.36zm9.76 0c0-.88-.23-1.618-.69-2.217-.326-.41-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.626.41-2.032.303-.406.7-.754 1.19-1.05.495-.297 1.05-.536 1.66-.716.61-.18 1.19-.274 1.73-.274.78 0 1.5.21 2.16.63.66.42 1.18 1.02 1.58 1.8.4.78.6 1.71.6 2.77 0 .97-.22 1.81-.66 2.52-.44.71-.98 1.27-1.62 1.67-.72.46-1.45.75-2.28.89-1.1.19-2.12.14-3.06-.14-.88-.25-1.63-.66-2.24-1.22-.61-.56-1.05-1.22-1.32-1.97l1.08-.44c.17.42.42.81.75 1.17.33.36.74.64 1.23.84.49.2 1.05.32 1.68.32.42 0 .83-.08 1.24-.24.41-.16.78-.39 1.1-.69.33-.3.6-.66.8-1.07.2-.41.3-.87.3-1.36z" />
-                  </svg>
-                  
-                  <p className="text-xl md:text-2xl font-medium text-gray-200 text-center">
-                    {projectDetails.testimonial.quote}
-                  </p>
-                </div>
+              <div className="flex flex-col items-center text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 text-accent/50 mb-6">
+                  <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                  <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                </svg>
                 
-                <div className="flex flex-col items-center">
-                  <div className="w-20 h-20 rounded-full mb-3 p-1 border-2 border-accent/60">
-                    {projectDetails.testimonial.image ? (
-                      <img 
-                        src={projectDetails.testimonial.image} 
-                        alt={projectDetails.testimonial.author}
-                        className="w-full h-full object-cover rounded-full"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-gray-800 rounded-full text-gray-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                          <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                      </div>
-                    )}
-                  </div>
-                  
-                  <p className="font-bold">{projectDetails.testimonial.author}</p>
-                  <p className="text-sm text-gray-400">
+                <blockquote className="text-xl md:text-2xl italic text-gray-200 mb-8">
+                  "{projectDetails.testimonial.quote}"
+                </blockquote>
+                
+                <div className="flex items-center flex-col">
+                  <cite className="font-bold text-gray-100 not-italic">
+                    {projectDetails.testimonial.author}
+                  </cite>
+                  <span className="text-gray-400 text-sm mt-1">
                     {projectDetails.testimonial.position}, {projectDetails.testimonial.company}
-                  </p>
+                  </span>
                 </div>
               </div>
             </motion.div>
@@ -534,24 +422,6 @@ export default function ProjectDetails() {
         </section>
       )}
       
-      {/* CTA section */}
-      <section className="py-20 bg-card/5">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Ready to transform your business with AI?
-            </h2>
-            <p className="text-gray-300 mb-8">
-              Let's discuss how our solutions can help you achieve similar results.
-            </p>
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-black">
-              <a href="/#contact">Get in touch</a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
       <Footer />
     </div>
   );
