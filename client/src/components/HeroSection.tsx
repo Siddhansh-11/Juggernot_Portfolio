@@ -36,7 +36,7 @@ export default function HeroSection() {
                 href="https://juggernot-ai.notion.site/Juggernot-Form-1d7fe7cd64fe80f6801feae3e074a395?pvs=4"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "#065f46", fontWeight: "bold" }}
+                style={{ color: "white", fontWeight: "bold" }}
               >
                 Let's Build Together
               </a>
