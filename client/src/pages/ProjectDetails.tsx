@@ -238,8 +238,8 @@ export default function ProjectDetails() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`flex-none rounded-lg overflow-hidden shadow-lg ${
                       screenshot.type === 'mobile' 
-                        ? 'w-[300px] md:w-[320px] bg-black/80 pt-4 pb-8 px-4' 
-                        : 'w-[450px] md:w-[600px]'
+                        ? 'w-[240px] md:w-[260px] bg-black/80 pt-4 pb-8 px-4' 
+                        : 'w-[320px] md:w-[420px]'
                     }`}
                   >
                     <div className={`
