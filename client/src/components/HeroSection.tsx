@@ -18,7 +18,9 @@ export default function HeroSection() {
       >
         <div className="max-w-2xl mx-auto">
           <div className="mb-2 text-center">
-            <span className="inline-block text-accent bg-accent/10 px-4 py-1 rounded-full text-sm font-bold tracking-wide">Juggernot AI</span>
+            <span className="inline-block text-accent bg-accent/10 px-4 py-1 rounded-full text-sm font-bold tracking-wide">
+              Juggernot AI
+            </span>
           </div>
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
             Empowering People & Businesses with{" "}
@@ -26,9 +28,8 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-lg text-gray-300 mb-10">
-            Our custom LLM applications and intelligent AI agents transform how you work, 
-            communicate, and solve complex problems—delivering unmatched efficiency with 
-            human-like understanding.
+            Our custom LLM applications and intelligent AI agents transform how
+            you work, communicate, and solve complex problems.
           </p>
 
           <div className="flex justify-center">

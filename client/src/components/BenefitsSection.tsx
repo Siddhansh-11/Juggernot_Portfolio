@@ -33,9 +33,9 @@ export default function BenefitsSection() {
                 <div className="rounded-full bg-accent/20 p-3">
                   {benefit.icon}
                 </div>
-                <h3 className="text-2xl font-bold">{benefit.percentage}</h3>
+                <h3 className="text-xl font-bold">{benefit.title}</h3>
               </div>
-              <h4 className="text-lg font-semibold mb-3">{benefit.title}</h4>
+              <h4 className="text-lg font-semibold mb-3">{benefit.percentage}</h4>
               <p className="text-gray-400">{benefit.description}</p>
             </motion.div>
           ))}
