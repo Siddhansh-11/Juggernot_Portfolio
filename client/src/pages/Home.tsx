@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import ProjectShowcase from "../components/ProjectShowcase";
 import ServicesSection from "../components/ServicesSection";
-import BenefitsSection from "../components/BenefitsSection";
+// import BenefitsSection from "../components/BenefitsSection"; // Temporarily removed
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 
@@ -19,7 +19,7 @@ export default function Home() {
       <HeroSection />
       <ProjectShowcase />
       <ServicesSection />
-      <BenefitsSection />
+      {/* BenefitsSection temporarily removed */}
       <CallToAction />
       <Footer />
     </motion.div>

@@ -15,9 +15,8 @@ export default function ProjectShowcase() {
       const { current } = scrollRef;
       // Use smaller scroll amount on mobile
       const isMobile = window.innerWidth < 768;
-      const scrollAmount = direction === "left" 
-        ? (isMobile ? -300 : -500) 
-        : (isMobile ? 300 : 500);
+      const scrollAmount =
+        direction === "left" ? (isMobile ? -300 : -500) : isMobile ? 300 : 500;
       current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
@@ -27,7 +26,7 @@ export default function ProjectShowcase() {
       const { current } = scrollRef;
       setShowLeftArrow(current.scrollLeft > 0);
       setShowRightArrow(
-        current.scrollLeft < current.scrollWidth - current.clientWidth - 10
+        current.scrollLeft < current.scrollWidth - current.clientWidth - 10,
       );
     }
   };
@@ -52,8 +51,8 @@ export default function ProjectShowcase() {
       >
         <h2 className="text-3xl font-bold mb-3">My Projects</h2>
         <p className="text-gray-400 max-w-2xl">
-          Discover how we've helped leading companies transform their operations
-          with our solutions.
+          Explore how I've helped leading companies and people transform how
+          they work.
         </p>
       </motion.div>
 
@@ -101,21 +100,23 @@ export default function ProjectShowcase() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex-none w-[280px] md:w-[360px] rounded-xl overflow-hidden bg-card border border-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-accent/30 group relative snap-center"
               >
-                <a 
-                  href={`/projects/${project.id || project.title.toLowerCase().replace(/\s+/g, '-')}`}
+                <a
+                  href={`/projects/${project.id || project.title.toLowerCase().replace(/\s+/g, "-")}`}
                   className="absolute inset-0 z-10"
                   aria-label={`View ${project.title} case study`}
                 ></a>
-                
+
                 <div className="relative aspect-square bg-gradient-to-br from-primary/20 to-accent/10">
                   <div className="absolute inset-0 flex items-center justify-center">
                     {project.image ? (
-                      <img 
-                        src={project.image} 
+                      <img
+                        src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover"
                         onError={() => {
-                          console.error(`Failed to load image: ${project.image}`);
+                          console.error(
+                            `Failed to load image: ${project.image}`,
+                          );
                         }}
                       />
                     ) : (
