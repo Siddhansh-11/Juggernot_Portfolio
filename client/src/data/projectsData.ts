@@ -11,27 +11,8 @@ export interface Project {
 }
 
 export const projectsData: Project[] = [
-  // 1. KapitalBank
-  {
-    id: "kapitalbank",
-    title: "KapitalBank",
-    category: "Financial",
-    description: "Built a securities product with AI-powered analysis to grow 18x in 2 years.",
-    image: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=360&h=360&q=80",
-    icon: [
-      React.createElement("rect", { key: 1, x: "50", y: "50", width: "300", height: "200", fill: "#4B0082", opacity: "0.2" }),
-      React.createElement("line", { key: 2, x1: "100", y1: "100", x2: "300", y2: "100", stroke: "#6C5CE7", strokeWidth: "2" }),
-      React.createElement("line", { key: 3, x1: "100", y1: "130", x2: "300", y2: "130", stroke: "#6C5CE7", strokeWidth: "2" }),
-      React.createElement("line", { key: 4, x1: "100", y1: "160", x2: "300", y2: "160", stroke: "#6C5CE7", strokeWidth: "2" }),
-      React.createElement("line", { key: 5, x1: "100", y1: "190", x2: "300", y2: "190", stroke: "#6C5CE7", strokeWidth: "2" }),
-      React.createElement("line", { key: 6, x1: "100", y1: "220", x2: "300", y2: "220", stroke: "#6C5CE7", strokeWidth: "2" }),
-      React.createElement("rect", { key: 7, x: "150", y: "75", width: "50", height: "200", fill: "#6C5CE7", opacity: "0.5" }),
-      React.createElement("rect", { key: 8, x: "210", y: "50", width: "50", height: "225", fill: "#6C5CE7", opacity: "0.8" }),
-      React.createElement("rect", { key: 9, x: "270", y: "100", width: "50", height: "175", fill: "#6C5CE7", opacity: "0.3" })
-    ]
-  },
   
-  // 2. ReplyRocket AI
+  // 1. ReplyRocket AI
   {
     id: "replyrocket",
     title: "ReplyRocket AI",
@@ -65,7 +46,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 3. Agent Ari
+  // 2. Agent Ari
   {
     id: "agent-ari",
     title: "Agent Ari",
@@ -92,7 +73,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 4. Agent Lav
+  // 3. Agent Lav
   {
     id: "agent-lav",
     title: "Agent Lav",
@@ -114,7 +95,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 5. Agent Malcom
+  // 4. Agent Malcom
   {
     id: "agent-malcom",
     title: "Agent Malcom",
@@ -136,7 +117,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 6. Omnycomm
+  // 5. Omnycomm
   {
     id: "omnycomm",
     title: "Omnycomm",
@@ -163,7 +144,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 7. INAAM Loyalty
+  // 6. INAAM Loyalty
   {
     id: "inaam",
     title: "INAAM Loyalty",
@@ -192,7 +173,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 8. Nyuyu Style Guide
+  // 7. Nyuyu Style Guide
   {
     id: "nyuyu",
     title: "Nyuyu Style Guide",
@@ -221,7 +202,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 9. Verizon BlueJeans
+  // 8. Verizon BlueJeans
   {
     id: "verizon-bluejeans",
     title: "Verizon BlueJeans",
@@ -238,7 +219,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 10. EsDee Sportswear
+  // 9. EsDee Sportswear
   {
     id: "esdee",
     title: "EsDee Sportswear",
