@@ -501,7 +501,6 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
       { value: "10K+", label: "Participating Businesses" }
     ],
     screenshots: [
-      { url: "/images/Inaam 2.webp", alt: "INAAM Dashboard", type: "desktop" },
       { url: "/images/Inaam 5.webp", alt: "INAAM Configuration", type: "desktop" },
       { url: "/images/Inaam 6.webp", alt: "INAAM Interface", type: "desktop" },
       { url: "/images/Inaam 7.png", alt: "INAAM Analytics", type: "desktop" },
