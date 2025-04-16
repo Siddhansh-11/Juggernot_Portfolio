@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "wouter";
+import { Menu, X, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
+  const isProjectPage = location.startsWith('/projects/');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,42 +43,65 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="hidden md:flex space-x-8 text-sm font-medium">
-          <a
-            href="#services"
-            className="text-white hover:text-accent transition-colors"
-          >
-            Services
-          </a>
-          <a
-            href="#projects"
-            className="text-white hover:text-accent transition-colors"
-          >
-            Projects
-          </a>
-          <a
-            href="#benefits"
-            className="text-white hover:text-accent transition-colors"
-          >
-            Benefits
-          </a>
-          <a
-            href="#about"
-            className="text-white hover:text-accent transition-colors"
-          >
-            About
-          </a>
-        </div>
+        {!isProjectPage ? (
+          <div className="hidden md:flex space-x-8 text-sm font-medium">
+            <a
+              href="#services"
+              className="text-white hover:text-accent transition-colors"
+            >
+              Services
+            </a>
+            <a
+              href="#projects"
+              className="text-white hover:text-accent transition-colors"
+            >
+              Projects
+            </a>
+            <a
+              href="#benefits"
+              className="text-white hover:text-accent transition-colors"
+            >
+              Benefits
+            </a>
+            <a
+              href="#about"
+              className="text-white hover:text-accent transition-colors"
+            >
+              About
+            </a>
+          </div>
+        ) : (
+          <div className="hidden md:flex space-x-8 text-sm font-medium">
+            <Link href="/">
+              <a className="text-white hover:text-accent transition-colors flex items-center gap-1">
+                <ArrowLeft size={16} />
+                <span>Back to Home</span>
+              </a>
+            </Link>
+          </div>
+        )}
 
         <div className="flex items-center gap-4">
-          <Button
-            asChild
-            variant="default"
-            size="sm"
-            className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-white rounded-full"
-          >
-            <a href="#contact">Get in touch</a>
-          </Button>
+          {!isProjectPage ? (
+            <Button
+              asChild
+              variant="default"
+              size="sm"
+              className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-white rounded-full"
+            >
+              <a href="#contact">Get in touch</a>
+            </Button>
+          ) : (
+            <Link href="/#projects">
+              <Button
+                variant="outline"
+                size="sm"
+                className="hidden md:inline-flex border-accent text-accent hover:bg-accent/10 rounded-full"
+              >
+                View all projects
+              </Button>
+            </Link>
+          )}
 
           <button
             className="md:hidden text-white focus:outline-none"
@@ -97,46 +122,70 @@ export default function Navbar() {
             className="md:hidden bg-background/95 backdrop-blur-md border-b border-border/20"
           >
             <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
-              <a
-                href="#services"
-                className="text-white py-2 hover:text-accent transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Services
-              </a>
-              <a
-                href="#projects"
-                className="text-white py-2 hover:text-accent transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Projects
-              </a>
-              <a
-                href="#benefits"
-                className="text-white py-2 hover:text-accent transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Benefits
-              </a>
-              <a
-                href="#about"
-                className="text-white py-2 hover:text-accent transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
-              </a>
-              <Button
-                asChild
-                variant="default"
-                className="bg-accent hover:bg-accent/90 text-white w-full rounded-lg mt-4"
-              >
-                <a
-                  href="#contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Get in touch
-                </a>
-              </Button>
+              {!isProjectPage ? (
+                <>
+                  <a
+                    href="#services"
+                    className="text-white py-2 hover:text-accent transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Services
+                  </a>
+                  <a
+                    href="#projects"
+                    className="text-white py-2 hover:text-accent transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Projects
+                  </a>
+                  <a
+                    href="#benefits"
+                    className="text-white py-2 hover:text-accent transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Benefits
+                  </a>
+                  <a
+                    href="#about"
+                    className="text-white py-2 hover:text-accent transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    About
+                  </a>
+                  <Button
+                    asChild
+                    variant="default"
+                    className="bg-accent hover:bg-accent/90 text-white w-full rounded-lg mt-4"
+                  >
+                    <a
+                      href="#contact"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Get in touch
+                    </a>
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Link href="/">
+                    <a 
+                      className="text-white py-2 hover:text-accent transition-colors flex items-center gap-1"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <ArrowLeft size={16} />
+                      <span>Back to Home</span>
+                    </a>
+                  </Link>
+                  <Link href="/#projects">
+                    <a
+                      className="text-white py-2 hover:text-accent transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      View all projects
+                    </a>
+                  </Link>
+                </>
+              )}
             </div>
           </motion.div>
         )}

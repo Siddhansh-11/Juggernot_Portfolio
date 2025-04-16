@@ -260,11 +260,7 @@ export default function ProjectDetails() {
                         className="w-full h-auto"
                       />
                     </div>
-                    {screenshot.caption && (
-                      <div className="p-4 bg-card">
-                        <p className="text-sm text-gray-300">{screenshot.caption}</p>
-                      </div>
-                    )}
+
                   </motion.div>
                 ))}
               </div>

@@ -501,10 +501,9 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
       { value: "10K+", label: "Participating Businesses" }
     ],
     screenshots: [
-      { url: "/images/Inaam 1.webp", alt: "INAAM Loyalty Main Dashboard", type: "desktop" },
+      { url: "/images/Inaam 1.webp", alt: "INAAM Loyalty Dashboard", type: "desktop" },
       { url: "/images/Inaam 2.webp", alt: "INAAM Merchant Portal", type: "desktop" },
       { url: "/images/Inaam 5.webp", alt: "INAAM Merchant Configuration", type: "desktop" },
-      { url: "/images/Inaam 6.webp", alt: "INAAM Mobile Redemption", type: "mobile" },
     ],
     problemDescription: "Businesses struggled with standalone loyalty programs that suffered from low engagement, while customers were frustrated by managing multiple loyalty cards and programs across different merchants.",
     painPoints: [
