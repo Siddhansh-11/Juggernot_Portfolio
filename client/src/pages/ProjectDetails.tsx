@@ -5,6 +5,7 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { projectDetailsData } from "../data/projectDetailsData";
 import { cn } from "@/lib/utils";
+import Footer from "../components/Footer";
 
 export default function ProjectDetails() {
   // Get project ID from URL
@@ -174,7 +175,7 @@ export default function ProjectDetails() {
           
           <div 
             ref={screenshotScrollRef}
-            className="overflow-x-auto cursor-grab active:cursor-grabbing pb-8"
+            className="overflow-x-auto cursor-grab active:cursor-grabbing scrollbar-hide"
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
@@ -187,13 +188,28 @@ export default function ProjectDetails() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex-none w-[280px] md:w-[500px] rounded-lg overflow-hidden shadow-lg"
+                  className={`flex-none rounded-lg overflow-hidden shadow-lg ${
+                    screenshot.type === 'mobile' 
+                      ? 'w-[200px] md:w-[240px] bg-black/80 pt-4 pb-8 px-2' 
+                      : 'w-[450px] md:w-[600px]'
+                  }`}
                 >
-                  <img 
-                    src={screenshot.url} 
-                    alt={screenshot.alt}
-                    className="w-full h-auto"
-                  />
+                  <div className={`
+                    ${screenshot.type === 'mobile' 
+                      ? 'rounded-lg overflow-hidden mx-auto relative' 
+                      : ''}
+                  `}>
+                    {screenshot.type === 'mobile' && (
+                      <div className="absolute top-0 left-0 right-0 flex justify-center p-1 space-x-1">
+                        <div className="w-10 h-1 bg-gray-600 rounded-full"></div>
+                      </div>
+                    )}
+                    <img 
+                      src={screenshot.url} 
+                      alt={screenshot.alt}
+                      className="w-full h-auto"
+                    />
+                  </div>
                   {screenshot.caption && (
                     <div className="p-4 bg-card">
                       <p className="text-sm text-gray-300">{screenshot.caption}</p>
@@ -220,7 +236,7 @@ export default function ProjectDetails() {
               <p className="text-gray-300 mb-12">{projectDetails.problemDescription}</p>
             </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-6">
               {projectDetails.painPoints.map((point, index) => (
                 <motion.div
                   key={index}
@@ -228,15 +244,17 @@ export default function ProjectDetails() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card/10 p-6 rounded-lg border border-white/5"
+                  className="bg-card/10 p-6 rounded-lg border border-white/5 flex gap-4 items-start"
                 >
-                  {point.icon && (
-                    <div className="mb-4 w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
-                      {point.icon}
-                    </div>
-                  )}
-                  <h3 className="text-xl font-bold mb-3">{point.title}</h3>
-                  <p className="text-gray-400">{point.description}</p>
+                  <div className="flex-shrink-0 w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center text-accent">
+                    {point.icon || (
+                      <span className="text-lg">💢</span>
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">{point.title}</h3>
+                    <p className="text-gray-400">{point.description}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -275,19 +293,28 @@ export default function ProjectDetails() {
                   )}
                 >
                   <div className="flex-1 flex flex-col justify-center">
-                    <h3 className="text-xl md:text-2xl font-bold mb-4">{solution.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 flex items-center">
+                      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-accent/20 text-accent mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      </span>
+                      {solution.title}
+                    </h3>
                     <p className="text-gray-400">{solution.description}</p>
                   </div>
                   
-                  <div className="flex-1 rounded-lg overflow-hidden bg-card/30">
+                  <div className="flex-1">
                     {solution.image ? (
-                      <img 
-                        src={solution.image} 
-                        alt={solution.title}
-                        className="w-full h-full object-cover"
-                      />
+                      <div className="aspect-square rounded-lg overflow-hidden">
+                        <img 
+                          src={solution.image} 
+                          alt={solution.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     ) : (
-                      <div className="w-full h-full min-h-[300px] flex items-center justify-center">
+                      <div className="aspect-square rounded-lg overflow-hidden bg-card/30 flex items-center justify-center">
                         <p className="text-gray-500">Image placeholder</p>
                       </div>
                     )}
@@ -328,15 +355,22 @@ export default function ProjectDetails() {
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  {projectDetails.testimonial.image && (
-                    <div className="w-16 h-16 rounded-full overflow-hidden mb-3">
+                  <div className="w-20 h-20 rounded-full mb-3 p-1 border-2 border-accent/60">
+                    {projectDetails.testimonial.image ? (
                       <img 
                         src={projectDetails.testimonial.image} 
                         alt={projectDetails.testimonial.author}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-full"
                       />
-                    </div>
-                  )}
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-gray-800 rounded-full text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                      </div>
+                    )}
+                  </div>
                   
                   <p className="font-bold">{projectDetails.testimonial.author}</p>
                   <p className="text-sm text-gray-400">
@@ -365,6 +399,9 @@ export default function ProjectDetails() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

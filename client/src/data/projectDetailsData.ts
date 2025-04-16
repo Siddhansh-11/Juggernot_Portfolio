@@ -17,6 +17,7 @@ export interface ProjectScreenshot {
   url: string;
   alt: string;
   caption?: string;
+  type?: 'desktop' | 'mobile'; // Specify if it's a mobile or desktop screenshot
 }
 
 export interface ProjectTestimonial {
@@ -66,9 +67,11 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     ],
     // videoUrl: "https://www.youtube.com/embed/VIDEO_ID", // Replace VIDEO_ID with actual YouTube video ID
     screenshots: [
-      { url: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=800&h=500&q=80", alt: "Dashboard View" },
-      { url: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=800&h=500&q=80", alt: "Analytics Panel" },
-      { url: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=800&h=500&q=80", alt: "User Portfolio" },
+      { url: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=800&h=500&q=80", alt: "Dashboard View", type: "desktop" },
+      { url: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=800&h=500&q=80", alt: "Analytics Panel", type: "desktop" },
+      { url: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=400&h=800&q=80", alt: "Mobile Dashboard", type: "mobile" },
+      { url: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=800&h=500&q=80", alt: "User Portfolio", type: "desktop" },
+      { url: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=400&h=800&q=80", alt: "Mobile Portfolio", type: "mobile" },
     ],
     problemDescription: "KapitalBank needed a modern securities platform that could handle complex financial data while providing actionable insights to both novice and experienced investors.",
     painPoints: [
