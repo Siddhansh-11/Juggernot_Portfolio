@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useRoute } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, AlertTriangle, Globe, Smartphone } from "lucide-react";
+import { ArrowLeft, ExternalLink, AlertTriangle, Globe, Smartphone, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { projectDetailsData } from "../data/projectDetailsData";
 import { cn } from "@/lib/utils";
@@ -304,59 +304,33 @@ export default function ProjectDetails() {
       {/* Solution section */}
       <section className="py-20 bg-card/5">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-6">Our Solution</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">{projectDetails.solutionDescription}</p>
+              <p className="text-gray-300 mb-12">{projectDetails.solutionDescription}</p>
             </motion.div>
             
-            <div className="space-y-24">
+            <div className="space-y-6">
               {projectDetails.solutions.map((solution, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className={cn(
-                    "flex flex-col gap-8",
-                    index % 2 === 0 
-                      ? "md:flex-row" 
-                      : "md:flex-row-reverse"
-                  )}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-card/10 p-6 rounded-lg border border-white/10 flex gap-4 items-start"
                 >
-                  <div className="flex-1 flex flex-col justify-center">
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 flex items-center">
-                      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-accent/20 text-accent mr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                      </span>
-                      {solution.title}
-                    </h3>
-                    <p className="text-gray-400">{solution.description}</p>
+                  <div className="flex-shrink-0 w-10 h-10 bg-emerald-500/15 rounded-full flex items-center justify-center text-emerald-400">
+                    <CheckCircle size={20} />
                   </div>
-                  
-                  <div className="flex-1">
-                    {solution.image ? (
-                      <div className="aspect-square rounded-lg overflow-hidden">
-                        <img 
-                          src={solution.image} 
-                          alt={solution.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ) : (
-                      <div className="aspect-square rounded-lg overflow-hidden bg-card/30 flex items-center justify-center">
-                        <p className="text-gray-500">Image placeholder</p>
-                      </div>
-                    )}
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
+                    <p className="text-gray-400">{solution.description}</p>
                   </div>
                 </motion.div>
               ))}
