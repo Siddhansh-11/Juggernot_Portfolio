@@ -3,7 +3,7 @@ import { benefitsData } from "../data/benefitsData";
 
 export default function BenefitsSection() {
   return (
-    <section id="benefits" className="py-24 bg-secondary relative">
+    <section id="benefits" className="py-24 bg-background relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ export default function BenefitsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-background rounded-xl border border-border/20 p-8"
+              className="bg-card rounded-xl border border-border/20 p-8"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="rounded-full bg-accent/20 p-3">
