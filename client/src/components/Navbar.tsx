@@ -72,12 +72,19 @@ export default function Navbar() {
           </div>
         ) : (
           <div className="hidden md:flex space-x-8 text-sm font-medium">
-            <Link href="/">
-              <a className="text-white hover:text-accent transition-colors flex items-center gap-1">
-                <ArrowLeft size={16} />
-                <span>Back to Home</span>
-              </a>
-            </Link>
+            <a 
+              href="/" 
+              className="text-white hover:text-accent transition-colors flex items-center gap-1"
+            >
+              <ArrowLeft size={16} />
+              <span>Back to Home</span>
+            </a>
+            <a 
+              href="/#projects" 
+              className="text-white hover:text-accent transition-colors"
+            >
+              View all projects
+            </a>
           </div>
         )}
 
@@ -92,15 +99,14 @@ export default function Navbar() {
               <a href="#contact">Get in touch</a>
             </Button>
           ) : (
-            <Link href="/#projects">
-              <Button
-                variant="outline"
-                size="sm"
-                className="hidden md:inline-flex border-accent text-accent hover:bg-accent/10 rounded-full"
-              >
-                View all projects
-              </Button>
-            </Link>
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className="hidden md:inline-flex border-accent text-accent hover:bg-accent/10 rounded-full"
+            >
+              <a href="/#projects">View all projects</a>
+            </Button>
           )}
 
           <button
@@ -167,23 +173,21 @@ export default function Navbar() {
                 </>
               ) : (
                 <>
-                  <Link href="/">
-                    <a 
-                      className="text-white py-2 hover:text-accent transition-colors flex items-center gap-1"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      <ArrowLeft size={16} />
-                      <span>Back to Home</span>
-                    </a>
-                  </Link>
-                  <Link href="/#projects">
-                    <a
-                      className="text-white py-2 hover:text-accent transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      View all projects
-                    </a>
-                  </Link>
+                  <a 
+                    href="/"
+                    className="text-white py-2 hover:text-accent transition-colors flex items-center gap-1"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <ArrowLeft size={16} />
+                    <span>Back to Home</span>
+                  </a>
+                  <a
+                    href="/#projects"
+                    className="text-white py-2 hover:text-accent transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    View all projects
+                  </a>
                 </>
               )}
             </div>
