@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/button";
 
 export default function CallToAction() {
   return (
-    <section id="contact" className="py-24 bg-background relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-24 bg-background relative overflow-hidden"
+    >
       <div className="absolute inset-0 grid-lines opacity-10"></div>
 
       <motion.div
@@ -19,15 +22,21 @@ export default function CallToAction() {
               Ready to transform your business?
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-              Get started and see how AI can transform your customer
-              interactions—faster, smarter, better.
+              Get started and see how AI can transform your business — faster,
+              smarter, better.
             </p>
 
-            <Button 
+            <Button
               asChild
               className="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-semibold h-auto"
             >
-              <a href="https://juggernot-ai.notion.site/Juggernot-Form-1d7fe7cd64fe80f6801feae3e074a395?pvs=4" target="_blank" rel="noopener noreferrer">Get in touch</a>
+              <a
+                href="https://juggernot-ai.notion.site/Juggernot-Form-1d7fe7cd64fe80f6801feae3e074a395?pvs=4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get in touch
+              </a>
             </Button>
           </div>
         </div>
