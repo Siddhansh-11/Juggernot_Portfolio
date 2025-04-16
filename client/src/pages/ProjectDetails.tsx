@@ -82,18 +82,47 @@ export default function ProjectDetails() {
   // Render not found if project doesn't exist
   if (!projectDetails) {
     return (
-      <div className="container mx-auto px-6 py-32 text-center">
-        <h1 className="text-4xl font-bold mb-6">Project Not Found</h1>
-        <p className="text-gray-400 mb-8">The project you're looking for doesn't seem to exist.</p>
-        <Button asChild>
-          <a href="/#projects">Return to Projects</a>
-        </Button>
+      <div className="min-h-screen bg-background">
+        {/* Back button - consistent with other project pages */}
+        <div className="container mx-auto px-6 py-6">
+          <Button 
+            asChild 
+            variant="outline" 
+            size="sm" 
+            className="w-fit"
+          >
+            <a href="/#projects" className="inline-flex items-center">
+              <ArrowLeft size={16} className="mr-2" />
+              Back
+            </a>
+          </Button>
+        </div>
+        
+        <div className="container mx-auto px-6 py-24 text-center">
+          <h1 className="text-4xl font-bold mb-6">Project Not Found</h1>
+          <p className="text-gray-400 mb-8">The project you're looking for doesn't seem to exist.</p>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Back button - positioned outside hero section for better spacing */}
+      <div className="container mx-auto px-6 py-6">
+        <Button 
+          asChild 
+          variant="outline" 
+          size="sm" 
+          className="w-fit"
+        >
+          <a href="/#projects" className="inline-flex items-center">
+            <ArrowLeft size={16} className="mr-2" />
+            Back
+          </a>
+        </Button>
+      </div>
+      
       {/* Hero section */}
       <section className="relative w-full h-[60vh] min-h-[500px] overflow-hidden bg-black">
         {/* Cover image with overlay */}
@@ -108,17 +137,6 @@ export default function ProjectDetails() {
         
         {/* Content */}
         <div className="container mx-auto px-6 relative z-10 h-full flex flex-col justify-end pb-16">
-          <Button 
-            asChild 
-            variant="outline" 
-            size="sm" 
-            className="mb-8 w-fit"
-          >
-            <a href="/#projects" className="inline-flex items-center">
-              <ArrowLeft size={16} className="mr-2" />
-              Back to Projects
-            </a>
-          </Button>
           
           <div className="mb-4">
             <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
