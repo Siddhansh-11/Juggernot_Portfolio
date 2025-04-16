@@ -46,12 +46,12 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 2. Agent Ari
+  // 2. AI JobSeeker Agent
   {
     id: "agent-ari",
-    title: "Agent Ari",
-    category: "AI Career Assistant",
-    description: "AI job seeking assistant that increases interview rates by 3.2x through personalized applications.",
+    title: "AI JobSeeker Agent",
+    category: "AI Agent / Job Automation",
+    description: "Intelligent agent that automates job applications with 5x better personalized matches.",
     image: "/images/agent-ari.webp",
     icon: [
       React.createElement("rect", { key: 1, x: "80", y: "80", width: "240", height: "140", rx: "10", fill: "#4B0082", opacity: "0.1" }),

@@ -197,18 +197,18 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     }
   },
 
-  // 3. Agent Ari (AI Job Seeker - Development in progress)
+  // 3. AI JobSeeker Agent
   "agent-ari": {
-    id: "agent-ari",
-    title: "Agent Ari",
-    category: "AI Career Assistant",
-    description: "An AI-powered job seeking assistant that personalizes applications and tracks opportunities.",
+    id: "jobseeker-agent",
+    title: "AI JobSeeker Agent",
+    category: "AI Agent / Job Automation",
+    description: "An intelligent AI-powered agent that automates the entire job application lifecycle for users—from personalized job discovery to seamless application submission and strategic networking.",
     coverImage: "/images/agent-ari.webp",
-    date: "2024 - In Development",
+    date: "2024",
     metrics: [
-      { value: "70%", label: "Time Saved" },
-      { value: "3.2x", label: "Interview Rate" },
-      { value: "94%", label: "User Satisfaction" }
+      { value: "80%", label: "Reduction in Time Spent Applying" },
+      { value: "5x", label: "Increase in Personalized Job Matches" },
+      { value: "60%", label: "Better Response Rate via Strategic Networking" }
     ],
     screenshots: [
       { url: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=500&q=80", alt: "Job Matching Dashboard", type: "desktop" },
@@ -217,53 +217,53 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
       { url: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=500&q=80", alt: "Interview Preparation", type: "desktop" },
       { url: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=800&q=80", alt: "Mobile Job Alerts", type: "mobile" },
     ],
-    problemDescription: "Job seekers face overwhelming challenges in today's competitive market, from tailoring applications to tracking opportunities and preparing for interviews, all while maintaining motivation during a stressful process.",
+    problemDescription: "Finding the right job today is a broken experience. Users are overwhelmed by irrelevant listings, forced to manually re-enter their details across platforms, and struggle to stand out. Fatigue sets in, personalization drops, and networking—often the key to landing a role—is left to chance.",
     painPoints: [
       {
-        title: "Application Fatigue",
-        description: "Job seekers burn out from repeatedly customizing resumes and cover letters for each position, often with limited feedback."
+        title: "Manual Fatigue",
+        description: "Users apply manually to hundreds of listings."
       },
       {
-        title: "Opportunity Management",
-        description: "Tracking applications across multiple platforms and stages leads to missed follow-ups and disorganized job search efforts."
+        title: "Poor Personalization",
+        description: "Generic feeds waste time."
       },
       {
-        title: "Interview Preparation",
-        description: "Candidates struggle to effectively prepare for company-specific interviews without insider knowledge or comprehensive resources."
+        title: "Inefficient Networking",
+        description: "No scalable way to get referrals."
       }
     ],
-    solutionDescription: "Agent Ari serves as an intelligent job search companion that streamlines applications, provides personalized guidance, and optimizes each stage of the job seeking process.",
+    solutionDescription: "JobSeeker Agent offers end-to-end job application automation.",
     solutions: [
       {
-        title: "Smart Application Customization",
-        description: "AI-powered resume and cover letter tailoring that matches your experience to job descriptions, highlighting relevant skills and accomplishments."
+        title: "Real-time Job Discovery",
+        description: "Intelligent job discovery from LinkedIn with customized filters based on user resume and preferences."
       },
       {
-        title: "Unified Opportunity Tracker",
-        description: "Centralized dashboard aggregating positions across platforms with automated follow-up reminders and application status tracking."
+        title: "Automated Application Submission",
+        description: "Agent-controlled browser to submit applications with AI-generated custom cover letters tailored to each position."
       },
       {
-        title: "Company-Specific Preparation",
-        description: "Custom interview preparation with company research, industry-specific questions, and AI-powered mock interviews with feedback."
+        title: "Strategic Networking",
+        description: "Automated referral outreach to key employees on LinkedIn, increasing chances of application review."
       },
       {
-        title: "Career Development Insights",
-        description: "Personalized skill gap analysis and learning recommendations to strengthen candidacy for target roles and industries."
+        title: "Personalized Job Matching",
+        description: "Smart filtering system that matches opportunities to your skills and career goals with high precision."
       }
     ],
     techStack: [
-      { name: "Figma", category: "design" },
-      { name: "Adobe XD", category: "design" },
-      { name: "React Native", category: "development" },
-      { name: "Node.js", category: "development" },
-      { name: "GPT-4", category: "development" },
-      { name: "MongoDB", category: "development" },
-      { name: "Firebase", category: "development" },
-      { name: "Heap", category: "analytics" },
-      { name: "Hotjar", category: "analytics" }
+      { name: "Electron", category: "development" },
+      { name: "React", category: "development" },
+      { name: "ShadCN UI", category: "design" },
+      { name: "Supabase", category: "development" },
+      { name: "Railway", category: "development" },
+      { name: "LangChain", category: "development" },
+      { name: "Gemini", category: "development" },
+      { name: "Browser Use", category: "development" },
+      { name: "Replit", category: "design" }
     ],
     testimonial: {
-      quote: "Agent Ari has revolutionized my job search. It's like having a personal career coach and assistant available 24/7. The personalized applications and interview preparation gave me the edge I needed.",
+      quote: "The AI JobSeeker Agent has completely transformed my job search. What used to take me weeks now happens automatically. I'm getting interviews at companies I never thought would respond, and the personalized outreach has led to meaningful connections.",
       author: "Michael Rodriguez",
       position: "Product Manager",
       company: "Recently hired at TechCorp"
