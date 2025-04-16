@@ -12,8 +12,8 @@ export interface Project {
 }
 
 export const projectsData: Project[] = [
-  // Active projects (without coming soon tag)
-  // 1. ReplyRocket AI
+  // AI projects first (both active and coming soon)
+  // 1. ReplyRocket AI (Active)
   {
     id: "replyrocket",
     title: "ReplyRocket AI",
@@ -47,7 +47,82 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 5. Omnycomm
+  // 2. AI JobSeeker Agent (Coming Soon)
+  {
+    id: "agent-ari",
+    title: "AI JobSeeker Agent",
+    category: "AI Agent / Job Automation",
+    description: "Intelligent agent that automates job applications with 5x better personalized matches.",
+    image: "/images/agent-ari.webp",
+    comingSoon: true,
+    icon: [
+      React.createElement("rect", { key: 1, x: "80", y: "80", width: "240", height: "140", rx: "10", fill: "#4B0082", opacity: "0.1" }),
+      React.createElement("path", { 
+        key: 2, 
+        d: "M120,110 L280,110 M120,140 L280,140 M120,170 L220,170", 
+        stroke: "#6C5CE7", 
+        strokeWidth: "3", 
+        fill: "none" 
+      }),
+      React.createElement("circle", { key: 3, cx: "260", cy: "170", r: "15", fill: "#6C5CE7", opacity: "0.5" }),
+      React.createElement("path", { 
+        key: 4, 
+        d: "M255,165 L265,175 M255,175 L265,165", 
+        stroke: "#FFFFFF", 
+        strokeWidth: "2" 
+      }),
+      React.createElement("rect", { key: 5, x: "100", y: "200", width: "200", height: "20", rx: "5", fill: "#6C5CE7", opacity: "0.2" })
+    ]
+  },
+  
+  // 3. Agent Lav (Coming Soon)
+  {
+    id: "agent-lav",
+    title: "Agent Lav",
+    category: "AI Social Media",
+    description: "Cross-platform social media manager that increased engagement by 4.7x across 7 platforms.",
+    image: "/images/agent-lav.webp",
+    comingSoon: true,
+    icon: [
+      React.createElement("circle", { key: 1, cx: "200", cy: "150", r: "100", fill: "#4B0082", opacity: "0.1" }),
+      React.createElement("circle", { key: 2, cx: "150", cy: "150", r: "30", fill: "#6C5CE7", opacity: "0.3" }),
+      React.createElement("circle", { key: 3, cx: "210", cy: "110", r: "25", fill: "#6C5CE7", opacity: "0.5" }),
+      React.createElement("circle", { key: 4, cx: "250", cy: "170", r: "20", fill: "#6C5CE7", opacity: "0.7" }),
+      React.createElement("path", { 
+        key: 5, 
+        d: "M150,150 L210,110 M210,110 L250,170 M250,170 L150,150", 
+        stroke: "#FFFFFF", 
+        strokeWidth: "2", 
+        fill: "none" 
+      })
+    ]
+  },
+  
+  // 4. Agent Malcom (Coming Soon)
+  {
+    id: "agent-malcom",
+    title: "Agent Malcom",
+    category: "AI Travel Guide",
+    description: "Personalized city guide with 93% recommendation relevance for travel, dining, and activities.",
+    image: "/images/agent-malcom.webp",
+    comingSoon: true,
+    icon: [
+      React.createElement("rect", { key: 1, x: "100", y: "70", width: "200", height: "160", rx: "15", fill: "#4B0082", opacity: "0.1" }),
+      React.createElement("circle", { key: 2, cx: "200", cy: "125", r: "40", fill: "#6C5CE7", opacity: "0.3" }),
+      React.createElement("path", { 
+        key: 3, 
+        d: "M200,85 L200,165 M160,125 L240,125", 
+        stroke: "#FFFFFF", 
+        strokeWidth: "3" 
+      }),
+      React.createElement("circle", { key: 4, cx: "160", cy: "190", r: "15", fill: "#6C5CE7", opacity: "0.5" }),
+      React.createElement("circle", { key: 5, cx: "200", cy: "190", r: "15", fill: "#6C5CE7", opacity: "0.5" }),
+      React.createElement("circle", { key: 6, cx: "240", cy: "190", r: "15", fill: "#6C5CE7", opacity: "0.5" })
+    ]
+  },
+  
+  // Other projects (both active and coming soon)
+  // 5. Omnycomm (Active)
   {
     id: "omnycomm",
     title: "Omnycomm",
@@ -74,7 +149,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 6. INAAM Loyalty
+  // 6. INAAM Loyalty (Active)
   {
     id: "inaam",
     title: "INAAM Loyalty",
@@ -103,82 +178,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // Coming soon projects
-  // 2. AI JobSeeker Agent
-  {
-    id: "agent-ari",
-    title: "AI JobSeeker Agent",
-    category: "AI Agent / Job Automation",
-    description: "Intelligent agent that automates job applications with 5x better personalized matches.",
-    image: "/images/agent-ari.webp",
-    comingSoon: true,
-    icon: [
-      React.createElement("rect", { key: 1, x: "80", y: "80", width: "240", height: "140", rx: "10", fill: "#4B0082", opacity: "0.1" }),
-      React.createElement("path", { 
-        key: 2, 
-        d: "M120,110 L280,110 M120,140 L280,140 M120,170 L220,170", 
-        stroke: "#6C5CE7", 
-        strokeWidth: "3", 
-        fill: "none" 
-      }),
-      React.createElement("circle", { key: 3, cx: "260", cy: "170", r: "15", fill: "#6C5CE7", opacity: "0.5" }),
-      React.createElement("path", { 
-        key: 4, 
-        d: "M255,165 L265,175 M255,175 L265,165", 
-        stroke: "#FFFFFF", 
-        strokeWidth: "2" 
-      }),
-      React.createElement("rect", { key: 5, x: "100", y: "200", width: "200", height: "20", rx: "5", fill: "#6C5CE7", opacity: "0.2" })
-    ]
-  },
-  
-  // 3. Agent Lav
-  {
-    id: "agent-lav",
-    title: "Agent Lav",
-    category: "AI Social Media",
-    description: "Cross-platform social media manager that increased engagement by 4.7x across 7 platforms.",
-    image: "/images/agent-lav.webp",
-    comingSoon: true,
-    icon: [
-      React.createElement("circle", { key: 1, cx: "200", cy: "150", r: "100", fill: "#4B0082", opacity: "0.1" }),
-      React.createElement("circle", { key: 2, cx: "150", cy: "150", r: "30", fill: "#6C5CE7", opacity: "0.3" }),
-      React.createElement("circle", { key: 3, cx: "210", cy: "110", r: "25", fill: "#6C5CE7", opacity: "0.5" }),
-      React.createElement("circle", { key: 4, cx: "250", cy: "170", r: "20", fill: "#6C5CE7", opacity: "0.7" }),
-      React.createElement("path", { 
-        key: 5, 
-        d: "M150,150 L210,110 M210,110 L250,170 M250,170 L150,150", 
-        stroke: "#FFFFFF", 
-        strokeWidth: "2", 
-        fill: "none" 
-      })
-    ]
-  },
-  
-  // 4. Agent Malcom
-  {
-    id: "agent-malcom",
-    title: "Agent Malcom",
-    category: "AI Travel Guide",
-    description: "Personalized city guide with 93% recommendation relevance for travel, dining, and activities.",
-    image: "/images/agent-malcom.webp",
-    comingSoon: true,
-    icon: [
-      React.createElement("rect", { key: 1, x: "100", y: "70", width: "200", height: "160", rx: "15", fill: "#4B0082", opacity: "0.1" }),
-      React.createElement("circle", { key: 2, cx: "200", cy: "125", r: "40", fill: "#6C5CE7", opacity: "0.3" }),
-      React.createElement("path", { 
-        key: 3, 
-        d: "M200,85 L200,165 M160,125 L240,125", 
-        stroke: "#FFFFFF", 
-        strokeWidth: "3" 
-      }),
-      React.createElement("circle", { key: 4, cx: "160", cy: "190", r: "15", fill: "#6C5CE7", opacity: "0.5" }),
-      React.createElement("circle", { key: 5, cx: "200", cy: "190", r: "15", fill: "#6C5CE7", opacity: "0.5" }),
-      React.createElement("circle", { key: 6, cx: "240", cy: "190", r: "15", fill: "#6C5CE7", opacity: "0.5" })
-    ]
-  },
-  
-  // 7. Nyuyu Style Guide
+  // 7. Nyuyu Style Guide (Coming Soon)
   {
     id: "nyuyu",
     title: "Nyuyu Style Guide",
@@ -208,7 +208,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 8. Verizon BlueJeans
+  // 8. Verizon BlueJeans (Coming Soon)
   {
     id: "verizon-bluejeans",
     title: "Verizon BlueJeans",
@@ -226,7 +226,7 @@ export const projectsData: Project[] = [
     ]
   },
   
-  // 9. Ess Dee Sportswear
+  // 9. Ess Dee Sportswear (Coming Soon)
   {
     id: "ess-dee",
     title: "Ess Dee Sportswear",
