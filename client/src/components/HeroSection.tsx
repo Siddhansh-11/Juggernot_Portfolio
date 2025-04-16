@@ -17,7 +17,7 @@ export default function HeroSection() {
         className="container mx-auto px-6 relative z-10 text-center"
       >
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-relaxed">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
             I Empower People & Businesses with{" "}
             <span className="gradient-text">Advanced AI Solutions</span>
           </h1>
