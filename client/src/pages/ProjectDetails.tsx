@@ -28,7 +28,7 @@ export default function ProjectDetails() {
     const scrollContainer = screenshotScrollRef.current;
     let animationFrameId: number;
     let scrollPosition = 0;
-    const scrollSpeed = 0.5; // pixels per frame
+    const scrollSpeed = 0.8; // pixels per frame (increased for faster scrolling)
     
     const scroll = () => {
       scrollPosition += scrollSpeed;
@@ -71,7 +71,7 @@ export default function ProjectDetails() {
     
     e.preventDefault();
     const x = e.pageX - screenshotScrollRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Scroll speed multiplier
+    const walk = (x - startX) * 3; // Scroll speed multiplier (increased for faster manual scrolling)
     screenshotScrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -244,11 +244,13 @@ export default function ProjectDetails() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card/10 p-6 rounded-lg border border-white/5 flex gap-4 items-start"
+                  className="bg-card/10 p-6 rounded-lg border border-white/10 flex gap-4 items-start"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center text-accent">
+                  <div className="flex-shrink-0 w-10 h-10 bg-rose-500/15 rounded-full flex items-center justify-center text-rose-400">
                     {point.icon || (
-                      <span className="text-lg">💢</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
                     )}
                   </div>
                   <div>
@@ -335,7 +337,7 @@ export default function ProjectDetails() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto bg-card/10 p-8 md:p-12 rounded-xl border border-white/5"
+              className="max-w-4xl mx-auto bg-card/10 p-8 md:p-12 rounded-xl border border-white/10"
             >
               <div className="flex flex-col items-center">
                 <div className="relative mb-8">
