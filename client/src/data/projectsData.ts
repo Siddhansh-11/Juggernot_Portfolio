@@ -1,10 +1,21 @@
 import React from "react";
 
-export const projectsData = [
+// Project type definition for better TypeScript support
+export interface Project {
+  title: string;
+  category: string;
+  description: string;
+  icon: React.ReactElement[];
+  image?: string; // Optional image URL property
+}
+
+export const projectsData: Project[] = [
   {
     title: "KapitalBank",
     category: "Financial",
     description: "Built a securities product with AI-powered analysis to grow 18x in 2 years.",
+    // This is a placeholder for demonstration - replace with actual image path
+    image: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=360&h=360&q=80",
     icon: [
       React.createElement("rect", { key: 1, x: "50", y: "50", width: "300", height: "200", fill: "#4B0082", opacity: "0.2" }),
       React.createElement("line", { key: 2, x1: "100", y1: "100", x2: "300", y2: "100", stroke: "#6C5CE7", strokeWidth: "2" }),

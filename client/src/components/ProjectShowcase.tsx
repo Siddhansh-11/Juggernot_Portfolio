@@ -85,20 +85,28 @@ export default function ProjectShowcase() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex-none w-[360px] md:w-[480px] rounded-xl overflow-hidden bg-card border border-white/10"
+                className="flex-none w-[320px] md:w-[360px] rounded-xl overflow-hidden bg-card border border-white/10"
               >
-                <div className="relative h-64 bg-gradient-to-br from-primary/20 to-accent/10">
+                <div className="relative aspect-square bg-gradient-to-br from-primary/20 to-accent/10">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <svg
-                      className="w-full h-full object-cover mix-blend-overlay"
-                      viewBox="0 0 400 300"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      {project.icon.map((element) => element)}
-                    </svg>
+                    {project.image ? (
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <svg
+                        className="w-full h-full object-cover mix-blend-overlay"
+                        viewBox="0 0 400 400"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        {project.icon.map((element) => element)}
+                      </svg>
+                    )}
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-30"></div>
                 </div>
 
                 <div className="p-6">
