@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
 import { servicesData } from "../data/servicesData";
 
 export default function ServicesSection() {
@@ -46,21 +45,34 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="service-card bg-card rounded-xl border border-border/20 p-6"
+              style={{ backgroundColor: "#181818" }}
+              className="service-card rounded-xl border border-border/20 p-6"
             >
-              <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-6">
-                {service.icon}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-bold">{service.title}</h3>
               </div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+              
               <p className="text-gray-400 mb-4">{service.description}</p>
-              <ul className="space-y-2 mb-6">
+              
+              <div className="rounded-lg bg-black/50 p-4 mb-6 min-h-[100px] flex items-center justify-center">
+                <p className="text-xs text-gray-400 italic text-center">
+                  {service.demoContent}
+                </p>
+              </div>
+              
+              <div className="flex flex-wrap gap-2">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <Check size={18} className="text-accent mr-2 mt-0.5" />
-                    <span className="text-sm text-gray-300">{feature}</span>
-                  </li>
+                  <span 
+                    key={idx} 
+                    className="text-xs text-gray-400 bg-black/30 px-3 py-1 rounded-full"
+                  >
+                    {feature}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </motion.div>
           ))}
         </div>
