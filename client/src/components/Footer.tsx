@@ -28,8 +28,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Transforming businesses with AI-powered solutions for customer support,
-              insights, and automation.
+              
             </p>
             <div className="flex space-x-4">
               <a
