@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, Clock } from "lucide-react";
 import { projectsData } from "../data/projectsData";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export default function ProjectShowcase() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -114,10 +115,16 @@ export default function ProjectShowcase() {
                 </div>
 
                 <div className="p-6">
-                  <div className="mb-2">
+                  <div className="flex mb-2 gap-2 flex-wrap">
                     <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
                       {project.category}
                     </span>
+                    {project.comingSoon && (
+                      <Badge variant="outline" className="bg-amber-500/20 text-amber-300 border-amber-500/30 flex items-center gap-1">
+                        <Clock size={12} />
+                        <span>Coming Soon</span>
+                      </Badge>
+                    )}
                   </div>
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-gray-400 mb-4">{project.description}</p>
