@@ -2,15 +2,17 @@ import React from "react";
 
 // Project type definition for better TypeScript support
 export interface Project {
+  id?: string;      // Optional ID for direct URL linking
   title: string;
   category: string;
   description: string;
   icon: React.ReactElement[];
-  image?: string; // Optional image URL property
+  image?: string;   // Optional image URL property
 }
 
 export const projectsData: Project[] = [
   {
+    id: "kapitalbank",
     title: "KapitalBank",
     category: "Financial",
     description: "Built a securities product with AI-powered analysis to grow 18x in 2 years.",
@@ -29,6 +31,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: "quickbite",
     title: "QuickBite",
     category: "Food Tech",
     description: "Enabled multi-brand product delivery 2.5x faster with AI routing and logistics.",
@@ -54,6 +57,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: "ridetech",
     title: "RideTech",
     category: "Mobility",
     description:

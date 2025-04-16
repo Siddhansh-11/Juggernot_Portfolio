@@ -123,7 +123,7 @@ export default function ProjectShowcase() {
                     variant="link"
                     className="p-0 h-auto text-accent"
                   >
-                    <a href="#" className="inline-flex items-center">
+                    <a href={`/projects/${project.id || project.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center">
                       View case study
                       <ArrowRight size={16} className="ml-1" />
                     </a>
