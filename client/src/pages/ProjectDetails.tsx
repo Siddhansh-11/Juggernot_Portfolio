@@ -179,72 +179,89 @@ export default function ProjectDetails() {
           <div className="container mx-auto px-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-8">See it in action</h2>
             <div className="aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden">
-              <iframe 
-                src={projectDetails.videoUrl} 
-                title={`${projectDetails.title} Video`}
-                className="w-full h-full" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
+              {projectDetails.videoUrl.includes('youtube.com') ? (
+                <iframe 
+                  src={projectDetails.videoUrl} 
+                  title={`${projectDetails.title} Video`}
+                  className="w-full h-full" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                ></iframe>
+              ) : (
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  preload="auto"
+                  className="w-full h-full object-cover"
+                >
+                  <source src={projectDetails.videoUrl} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </div>
           </div>
         </section>
       )}
       
       {/* Screenshots section */}
-      <section className="py-20 bg-card/5">
-        <div className="container mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8">Project Gallery</h2>
-          
-          <div 
-            ref={screenshotScrollRef}
-            className="overflow-x-auto cursor-grab active:cursor-grabbing horizontal-scroll-container"
-            onMouseDown={handleMouseDown}
-            onMouseLeave={handleMouseLeave}
-            onMouseUp={handleMouseUp}
-            onMouseMove={handleMouseMove}
-          >
-            <div className="inline-flex space-x-6">
-              {projectDetails.screenshots.map((screenshot, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`flex-none rounded-lg overflow-hidden shadow-lg ${
-                    screenshot.type === 'mobile' 
-                      ? 'w-[300px] md:w-[320px] bg-black/80 pt-4 pb-8 px-4' 
-                      : 'w-[450px] md:w-[600px]'
-                  }`}
-                >
-                  <div className={`
-                    ${screenshot.type === 'mobile' 
-                      ? 'rounded-lg overflow-hidden mx-auto relative' 
-                      : ''}
-                  `}>
-                    {screenshot.type === 'mobile' && (
-                      <div className="absolute top-0 left-0 right-0 flex justify-center p-1 space-x-1">
-                        <div className="w-10 h-1 bg-gray-600 rounded-full"></div>
+      {projectDetails.screenshots.length > 0 && (
+        <section className="py-20 bg-card/5">
+          <div className="container mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8">Project Gallery</h2>
+            
+            <div 
+              ref={screenshotScrollRef}
+              className="overflow-x-auto cursor-grab active:cursor-grabbing horizontal-scroll-container"
+              onMouseDown={handleMouseDown}
+              onMouseLeave={handleMouseLeave}
+              onMouseUp={handleMouseUp}
+              onMouseMove={handleMouseMove}
+            >
+              <div className="inline-flex space-x-6">
+                {projectDetails.screenshots.map((screenshot, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className={`flex-none rounded-lg overflow-hidden shadow-lg ${
+                      screenshot.type === 'mobile' 
+                        ? 'w-[300px] md:w-[320px] bg-black/80 pt-4 pb-8 px-4' 
+                        : 'w-[450px] md:w-[600px]'
+                    }`}
+                  >
+                    <div className={`
+                      ${screenshot.type === 'mobile' 
+                        ? 'rounded-lg overflow-hidden mx-auto relative' 
+                        : ''}
+                    `}>
+                      {screenshot.type === 'mobile' && (
+                        <div className="absolute top-0 left-0 right-0 flex justify-center p-1 space-x-1">
+                          <div className="w-10 h-1 bg-gray-600 rounded-full"></div>
+                        </div>
+                      )}
+                      <img 
+                        src={screenshot.url} 
+                        alt={screenshot.alt}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    {screenshot.caption && (
+                      <div className="p-4 bg-card">
+                        <p className="text-sm text-gray-300">{screenshot.caption}</p>
                       </div>
                     )}
-                    <img 
-                      src={screenshot.url} 
-                      alt={screenshot.alt}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  {screenshot.caption && (
-                    <div className="p-4 bg-card">
-                      <p className="text-sm text-gray-300">{screenshot.caption}</p>
-                    </div>
-                  )}
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
       
       {/* Problem section */}
       <section className="py-20 bg-background">

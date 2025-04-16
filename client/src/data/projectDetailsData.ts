@@ -154,14 +154,8 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
       label: "Visit Website",
       type: "web"
     },
-    videoUrl: "https://www.youtube.com/embed/video_id_here",
-    screenshots: [
-      { url: "/images/ReplyRocket_JNT.webp", alt: "ReplyRocket Dashboard", type: "desktop" },
-      { url: "/images/replyrocket.webp", alt: "AI Response Settings", type: "desktop" },
-      { url: "/images/replyrocket.webp", alt: "Mobile Dashboard", type: "mobile" },
-      { url: "/images/replyrocket.webp", alt: "Analytics Dashboard", type: "desktop" },
-      { url: "/images/replyrocket.webp", alt: "Mobile Notifications", type: "mobile" },
-    ],
+    videoUrl: "/videos/replyrocket.mp4",
+    screenshots: [],
     problemDescription: "Businesses struggle to consistently engage with their Twitter audience, missing valuable opportunities for connection, lead generation, and support. Manual handling of customer queries, influencer tracking, and product marketing slows down teams and makes it hard to scale authentic interactions.",
     painPoints: [
       {
