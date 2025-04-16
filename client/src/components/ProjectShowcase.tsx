@@ -13,7 +13,11 @@ export default function ProjectShowcase() {
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const { current } = scrollRef;
-      const scrollAmount = direction === "left" ? -500 : 500;
+      // Use smaller scroll amount on mobile
+      const isMobile = window.innerWidth < 768;
+      const scrollAmount = direction === "left" 
+        ? (isMobile ? -300 : -500) 
+        : (isMobile ? 300 : 500);
       current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
@@ -56,8 +60,12 @@ export default function ProjectShowcase() {
       <div className="relative">
         {showLeftArrow && (
           <button
-            onClick={() => scroll("left")}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-background/80 hover:bg-accent/80 p-2 rounded-full transition-colors duration-200"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              scroll("left");
+            }}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-background/80 hover:bg-accent/80 p-2 rounded-full transition-colors duration-200"
             aria-label="Scroll left"
           >
             <ChevronLeft size={24} />
@@ -66,8 +74,12 @@ export default function ProjectShowcase() {
 
         {showRightArrow && (
           <button
-            onClick={() => scroll("right")}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-background/80 hover:bg-accent/80 p-2 rounded-full transition-colors duration-200"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              scroll("right");
+            }}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-background/80 hover:bg-accent/80 p-2 rounded-full transition-colors duration-200"
             aria-label="Scroll right"
           >
             <ChevronRight size={24} />
@@ -76,10 +88,10 @@ export default function ProjectShowcase() {
 
         <div
           ref={scrollRef}
-          className="horizontal-scroll-container pb-6 overflow-x-auto"
+          className="horizontal-scroll-container pb-6 overflow-x-auto snap-x snap-mandatory"
           onScroll={handleScroll}
         >
-          <div className="inline-flex space-x-6 px-6">
+          <div className="inline-flex space-x-6 px-6 pl-6 pr-16 sm:pr-20 md:px-6">
             {projectsData.map((project, index) => (
               <motion.div
                 key={index}
@@ -87,7 +99,7 @@ export default function ProjectShowcase() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex-none w-[320px] md:w-[360px] rounded-xl overflow-hidden bg-card border border-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-accent/30 group relative"
+                className="flex-none w-[280px] md:w-[360px] rounded-xl overflow-hidden bg-card border border-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-accent/30 group relative snap-center"
               >
                 <a 
                   href={`/projects/${project.id || project.title.toLowerCase().replace(/\s+/g, '-')}`}
