@@ -417,18 +417,18 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
     }
   },
 
-  // 6. Omnycomm: Ecommerce Platform (Like Shopify but for UAE market)
+  // 6. Omnycomm: Ecommerce Platform with ERP Automation
   "omnycomm": {
     id: "omnycomm",
     title: "Omnycomm",
-    category: "E-commerce Platform",
-    description: "UAE-focused e-commerce platform tailored for Middle Eastern markets and consumers.",
+    category: "E-commerce / ERP Automation",
+    description: "White-labeled e-commerce + ERP platform enabling hypermarkets and retail merchants to digitize inventory, launch online stores, and sync with regional marketplaces.",
     coverImage: "/images/omnycomm.webp",
-    date: "2022 - 2023",
+    date: "2022",
     metrics: [
-      { value: "15K+", label: "Active Merchants" },
-      { value: "45%", label: "Conversion Increase" },
-      { value: "3.2x", label: "GMV Growth" }
+      { value: "5x", label: "Faster Merchant Onboarding" },
+      { value: "60%", label: "Reduction in Order Processing Time" },
+      { value: "2000+", label: "Merchant Stores Enabled" }
     ],
     screenshots: [
       { url: "https://images.unsplash.com/photo-1556742031-c6961e8560b0?w=800&h=500&q=80", alt: "Merchant Dashboard", type: "desktop" },
@@ -437,57 +437,53 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
       { url: "https://images.unsplash.com/photo-1556742031-c6961e8560b0?w=800&h=500&q=80", alt: "Analytics Dashboard", type: "desktop" },
       { url: "https://images.unsplash.com/photo-1556742031-c6961e8560b0?w=400&h=800&q=80", alt: "Mobile Product Management", type: "mobile" },
     ],
-    problemDescription: "UAE and Middle Eastern merchants struggled with global e-commerce platforms that lacked regional payment methods, language support, and cultural adaptations necessary for the local market.",
+    problemDescription: "Traditional merchants lacked a scalable way to go online, sync with marketplaces, or manage high-volume inventory efficiently.",
     painPoints: [
       {
-        title: "Payment Integration Challenges",
-        description: "Existing platforms lacked seamless integration with preferred regional payment methods and local banking systems."
+        title: "No Digital Storefront",
+        description: "Merchants struggled to create branded e-commerce experiences."
       },
       {
-        title: "Language and Cultural Barriers",
-        description: "Global platforms offered limited Arabic support and lacked features aligned with regional shopping behaviors and expectations."
+        title: "Disconnected Systems",
+        description: "Inventory and order data were scattered across platforms."
       },
       {
-        title: "Logistical Complexity",
-        description: "Merchants faced difficulties integrating with local logistics providers and navigating regional shipping and delivery nuances."
+        title: "No Marketplace Sync",
+        description: "Manual updates led to frequent listing errors and stockouts."
       }
     ],
-    solutionDescription: "Omnycomm provides a comprehensive e-commerce platform specifically designed for UAE and Middle Eastern merchants with localized features, integrations, and cultural adaptations.",
+    solutionDescription: "Omnycomm offered a plug-and-play infrastructure to launch, manage, and scale online retail across marketplaces.",
     solutions: [
       {
-        title: "Regional Payment Ecosystem",
-        description: "Seamless integration with all major UAE and MENA payment methods including tabby, regional card processors, and bank-specific solutions."
+        title: "DIY E-commerce Store Builder",
+        description: "Templates and branding tools for merchants to quickly create customized online storefronts."
       },
       {
-        title: "Bilingual Store Management",
-        description: "Fully bilingual Arabic-English store management system with right-to-left design support and region-specific content templates."
+        title: "Unified Management Dashboard",
+        description: "Centralized system for inventory, order, and warehouse management across all sales channels."
       },
       {
-        title: "Integrated Local Logistics",
-        description: "Native integration with Aramex, Emirates Post, and other regional carriers with automated customs documentation and address formatting."
+        title: "Marketplace Auto-Sync",
+        description: "Automatic synchronization with Amazon, Noon, and 15+ marketplaces via prebuilt connectors."
       },
       {
-        title: "Cultural Shopping Adaptations",
-        description: "Features supporting regional shopping behaviors including specialized Ramadan campaign tools, voice-based shopping, and family account structures."
+        title: "Inventory Digitization",
+        description: "Support for over 2 million SKUs with streamlined operations across sourcing, order management, and last-mile delivery."
       }
     ],
     techStack: [
-      { name: "Figma", category: "design" },
-      { name: "Adobe Creative Suite", category: "design" },
       { name: "React", category: "development" },
-      { name: "Node.js", category: "development" },
-      { name: "MongoDB", category: "development" },
+      { name: "Django", category: "development" },
+      { name: "PostgreSQL", category: "development" },
       { name: "AWS", category: "development" },
-      { name: "Docker", category: "development" },
-      { name: "Segment", category: "analytics" },
-      { name: "Google Analytics 4", category: "analytics" },
-      { name: "Hotjar", category: "analytics" }
+      { name: "Google Analytics", category: "analytics" },
+      { name: "Google Lighthouse", category: "analytics" }
     ],
     testimonial: {
-      quote: "Omnycomm transformed our online business. As a UAE-based fashion brand, we struggled with international platforms that didn't understand our market. With Omnycomm, our conversion rate increased by 45% and customer satisfaction scores have never been higher.",
-      author: "Fatima Al-Maktoum",
-      position: "CEO",
-      company: "Elegance Abayas"
+      quote: "Omnycomm transformed how we manage our retail business. The platform helped us launch 50+ branded stores while maintaining a single inventory source. The marketplace sync feature alone saved us hundreds of hours in manual updates.",
+      author: "Mohammed Al-Qasimi",
+      position: "Digital Director",
+      company: "Western International Group"
     }
   },
 

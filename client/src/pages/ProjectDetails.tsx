@@ -77,7 +77,7 @@ export default function ProjectDetails() {
 
   // Don't render testimonial or screenshots for Agent Ari project
   const shouldShowTestimonial = projectDetails?.testimonial && projectId !== "agent-ari";
-  const shouldShowScreenshots = projectDetails?.screenshots?.length > 0 && projectId !== "agent-ari";
+  const shouldShowScreenshots = projectDetails?.screenshots && projectDetails.screenshots.length > 0 && projectId !== "agent-ari";
 
   // Render not found if project doesn't exist
   if (!projectDetails) {
@@ -388,7 +388,7 @@ export default function ProjectDetails() {
       </section>
       
       {/* Testimonial section - hidden for Agent Ari project */}
-      {shouldShowTestimonial && (
+      {shouldShowTestimonial && projectDetails.testimonial && (
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <motion.div

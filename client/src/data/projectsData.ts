@@ -121,8 +121,8 @@ export const projectsData: Project[] = [
   {
     id: "omnycomm",
     title: "Omnycomm",
-    category: "E-commerce Platform",
-    description: "UAE-focused e-commerce platform that increased merchant conversions by 45%.",
+    category: "E-commerce / ERP Automation",
+    description: "White-labeled e-commerce platform for hypermarkets with 2 million+ SKU support.",
     image: "/images/omnycomm.webp",
     icon: [
       React.createElement("rect", { key: 1, x: "80", y: "80", width: "240", height: "140", rx: "10", fill: "#4B0082", opacity: "0.1" }),
