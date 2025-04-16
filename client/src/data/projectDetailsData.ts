@@ -37,7 +37,7 @@ export interface ProjectMetric {
 export interface TechStackItem {
   name: string;
   logo?: string; // URL to logo image or icon
-  category: 'design' | 'development' | 'analytics';
+  category: 'design' | 'development' | 'analytics' | 'integration' | 'llm model' | 'AI-Image model';
 }
 
 export interface ProjectDetails {
@@ -149,11 +149,7 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
       { value: "73%", label: "Time Saved on Social" },
       { value: "47%", label: "Follower Growth" }
     ],
-    externalLink: {
-      url: "https://www.replyrocket.ai",
-      label: "Visit Website",
-      type: "web"
-    },
+    // External link removed as requested
     videoUrl: "/videos/ReplyRocket_VideoDemo_JNT.mp4",
     screenshots: [],
     problemDescription: "Businesses struggle to consistently engage with their Twitter audience, missing valuable opportunities for connection, lead generation, and support. Manual handling of customer queries, influencer tracking, and product marketing slows down teams and makes it hard to scale authentic interactions.",
@@ -187,15 +183,11 @@ export const projectDetailsData: Record<string, ProjectDetails> = {
       }
     ],
     techStack: [
-      { name: "Figma", category: "design" },
-      { name: "Framer", category: "design" },
-      { name: "Python", category: "development" },
-      { name: "TensorFlow", category: "development" },
+      { name: "Go", category: "development" },
       { name: "React", category: "development" },
-      { name: "AWS", category: "development" },
-      { name: "Twitter API", category: "development" },
-      { name: "Mixpanel", category: "analytics" },
-      { name: "Posthog", category: "analytics" }
+      { name: "Twitter APIs", category: "development" },
+      { name: "OpenAI GPT-4", category: "development" },
+      { name: "OpenAI Dalle", category: "development" }
     ],
     testimonial: {
       quote: "ReplyRocket transformed our Twitter presence. We've seen incredible growth in engagement without increasing our team's workload. The AI responses are indistinguishable from our own writing!",

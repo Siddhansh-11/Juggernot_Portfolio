@@ -175,10 +175,14 @@ export default function ProjectDetails() {
       
       {/* Video section (if available) */}
       {projectDetails.videoUrl && (
-        <section className="py-20 bg-background relative">
-          <div className="container mx-auto px-6">
+        <section className="py-20 bg-background relative grid-lines">
+          {/* Grid overlay background */}
+          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+          
+          <div className="container mx-auto px-6 relative z-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-8">See it in action</h2>
-            <div className="aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden">
+            <div className="aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl shadow-accent/10">
               {projectDetails.videoUrl.includes('youtube.com') ? (
                 <iframe 
                   src={projectDetails.videoUrl} 
