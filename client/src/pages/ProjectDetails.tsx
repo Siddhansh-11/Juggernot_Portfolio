@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useRoute } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, AlertTriangle, Globe, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { projectDetailsData } from "../data/projectDetailsData";
 import { cn } from "@/lib/utils";
@@ -142,9 +142,33 @@ export default function ProjectDetails() {
                 className="bg-card/20 backdrop-blur-md px-5 py-3 rounded-md border border-white/10"
               >
                 <p className="text-sm text-gray-400">{metric.label}</p>
-                <p className="text-xl font-medium">{metric.value}</p>
+                <p className="text-2xl font-medium text-[#39FF14]">{metric.value}</p>
               </div>
             ))}
+            
+            {/* External Link Button (if available) */}
+            {projectDetails.externalLink && (
+              <Button 
+                asChild 
+                variant="outline" 
+                size="lg" 
+                className="bg-accent/20 hover:bg-accent/30 border border-white/10"
+              >
+                <a 
+                  href={projectDetails.externalLink.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2"
+                >
+                  {projectDetails.externalLink.type === 'web' && <Globe size={18} />}
+                  {projectDetails.externalLink.type === 'app_store' && <Smartphone size={18} />}
+                  {projectDetails.externalLink.type === 'play_store' && <Smartphone size={18} />}
+                  {projectDetails.externalLink.type === 'github' && <ExternalLink size={18} />}
+                  {projectDetails.externalLink.label}
+                  <ExternalLink size={16} />
+                </a>
+              </Button>
+            )}
           </div>
         </div>
       </section>
@@ -190,7 +214,7 @@ export default function ProjectDetails() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`flex-none rounded-lg overflow-hidden shadow-lg ${
                     screenshot.type === 'mobile' 
-                      ? 'w-[200px] md:w-[240px] bg-black/80 pt-4 pb-8 px-2' 
+                      ? 'w-[300px] md:w-[320px] bg-black/80 pt-4 pb-8 px-4' 
                       : 'w-[450px] md:w-[600px]'
                   }`}
                 >
@@ -247,11 +271,7 @@ export default function ProjectDetails() {
                   className="bg-card/10 p-6 rounded-lg border border-white/10 flex gap-4 items-start"
                 >
                   <div className="flex-shrink-0 w-10 h-10 bg-rose-500/15 rounded-full flex items-center justify-center text-rose-400">
-                    {point.icon || (
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                      </svg>
-                    )}
+                    {point.icon || <AlertTriangle size={20} />}
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">{point.title}</h3>

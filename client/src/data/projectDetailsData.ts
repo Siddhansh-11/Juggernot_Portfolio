@@ -48,6 +48,11 @@ export interface ProjectDetails {
   coverImage: string;
   date: string;
   metrics: ProjectMetric[];
+  externalLink?: {
+    url: string;
+    label: string;
+    type: 'web' | 'app_store' | 'play_store' | 'github';
+  }; // External link to project website, app store, etc.
   videoUrl?: string; // YouTube embed URL (optional)
   screenshots: ProjectScreenshot[];
   problemDescription: string;
