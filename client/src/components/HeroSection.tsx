@@ -17,12 +17,12 @@ export default function HeroSection() {
         className="container mx-auto px-6 relative z-10 text-center"
       >
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-relaxed">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-relaxed">
             Empowering People & Businesses with{" "}
             <span className="gradient-text">Advanced AI Solutions</span>
           </h1>
 
-          <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+          <p className="text-lg text-gray-300 mb-10 leading-relaxed">
             Our custom LLM applications and intelligent AI agents transform how
             you work, communicate, and solve complex problems—delivering unmatched efficiency 
             with human-like understanding.
@@ -31,7 +31,7 @@ export default function HeroSection() {
           <div className="flex justify-center">
             <Button
               asChild
-              className="bg-accent hover:bg-accent/90 text-white px-10 py-4 text-lg rounded-lg font-medium text-center"
+              className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-medium text-center"
             >
               <a href="https://juggernot-ai.notion.site/Juggernot-Form-1d7fe7cd64fe80f6801feae3e074a395?pvs=4" target="_blank" rel="noopener noreferrer">Get started</a>
             </Button>
