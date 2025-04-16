@@ -85,6 +85,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: "globalcorp",
     title: "GlobalCorp",
     category: "Enterprise",
     description:
