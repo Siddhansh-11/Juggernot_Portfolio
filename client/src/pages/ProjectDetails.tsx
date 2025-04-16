@@ -81,11 +81,16 @@ export default function ProjectDetails() {
   // Get the corresponding project data to check if it's coming soon
   const isComingSoon = projectDetails?.category === "Coming Soon";
   
-  // Hide screenshots for: 1) Agent Ari project, 2) "Coming Soon" projects, 3) Omnycomm project
+  // Hide screenshots for: 1) Specifically mentioned projects and all "Coming Soon" projects
   const shouldShowScreenshots = 
     projectDetails?.screenshots && 
     projectDetails.screenshots.length > 0 && 
     projectId !== "agent-ari" && 
+    projectId !== "agent-lav" && 
+    projectId !== "agent-malcom" &&
+    projectId !== "nyuyu" &&
+    projectId !== "verizon-bluejeans" &&
+    projectId !== "ess-dee" &&
     !isComingSoon && 
     projectId !== "omnycomm";
 
