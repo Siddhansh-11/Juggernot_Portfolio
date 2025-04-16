@@ -216,7 +216,7 @@ export default function ProjectDetails() {
       )}
       
       {/* Screenshots section */}
-      {shouldShowScreenshots && (
+      {shouldShowScreenshots && projectDetails.id !== 'inaam' && (
         <section className="py-20 bg-card/5">
           <div className="container mx-auto px-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-8">Project Gallery</h2>
@@ -245,6 +245,22 @@ export default function ProjectDetails() {
                     }`}
                   />
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+      
+      {/* Temporary placeholder for INAAM project */}
+      {shouldShowScreenshots && projectDetails.id === 'inaam' && (
+        <section className="py-20 bg-card/5">
+          <div className="container mx-auto px-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">Project Gallery</h2>
+              <div className="bg-card/10 p-6 rounded-lg border border-white/10">
+                <p className="text-gray-400 italic">
+                  Gallery images will be added soon. Check back later for a complete showcase of the INAAM project.
+                </p>
               </div>
             </div>
           </div>
