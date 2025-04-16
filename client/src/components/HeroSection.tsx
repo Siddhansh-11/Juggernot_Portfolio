@@ -9,6 +9,9 @@ export default function HeroSection() {
       </div>
 
       <div className="absolute -left-64 top-1/2 w-96 h-96 bg-accent rounded-full blur-3xl opacity-10 blob-animation"></div>
+      
+      {/* Shimmer effect overlay */}
+      <div className="absolute inset-0 shimmer-effect"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
