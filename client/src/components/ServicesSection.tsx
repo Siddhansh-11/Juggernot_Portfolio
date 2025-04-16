@@ -4,7 +4,6 @@ import { servicesData } from "../data/servicesData";
 export default function ServicesSection() {
   return (
     <section id="services" className="py-24 bg-background relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-full h-full grid-lines"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
