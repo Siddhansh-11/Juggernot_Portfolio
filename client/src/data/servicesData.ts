@@ -1,84 +1,136 @@
 import {
   ImageIcon,
-  ShieldCheck,
   Mic,
   BarChart3,
   MessageSquare,
   Zap,
+  Brain,
+  Workflow,
+  Globe,
+  Database,
+  Video,
 } from "lucide-react";
 import React from "react";
 
 export const servicesData = [
   {
-    title: "Accurate Image Classification",
+    title: "Workflow Orchestration",
     description:
-      "Enhance support by precisely categorizing images for faster resolutions.",
-    icon: React.createElement(ImageIcon, { className: "h-5 w-5 text-accent" }),
+      "Design and implement complex automation workflows with AI agents that coordinate multiple tasks seamlessly.",
+    icon: React.createElement(Workflow, { className: "h-5 w-5 text-accent" }),
     features: [
-      "Real-time recognition",
-      "Custom training models",
-      "99.8% accuracy rate",
+      "Multi-step process automation",
+      "Conditional logic branching",
+      "Error handling and recovery",
     ],
-    demoContent: "Image recognition system showing coffee image with 96% confidence score and related classification metrics."
+    demoContent: "Workflow diagram showing a customer onboarding process with automated document verification and approval routing."
   },
   {
-    title: "Automated Quality Audits",
+    title: "Fluid Integrations (MCPs)",
     description:
-      "Ensure complete oversight by automating quality checks across all interactions.",
-    icon: React.createElement(ShieldCheck, { className: "h-5 w-5 text-accent" }),
+      "Connect AI systems to multiple platforms and services with multi-channel processors for unified experiences.",
+    icon: React.createElement(Zap, { className: "h-5 w-5 text-accent" }),
     features: [
-      "Comprehensive SOP coverage",
-      "Sentiment analysis",
-      "Actionable feedback",
+      "API-first architecture",
+      "Cross-platform compatibility",
+      "Real-time data synchronization",
     ],
-    demoContent: "Quality assurance checklist displaying successful greeting and action items with a failed customer sentiment check."
+    demoContent: "Integration hub displaying connections to multiple platforms (Freshdesk, Salesforce, WhatsApp, Zoom) around a central 'nugget' node."
+  },
+  {
+    title: "Browser Use",
+    description:
+      "Enable AI agents to navigate websites, fill forms, and extract information as if they were human users.",
+    icon: React.createElement(Globe, { className: "h-5 w-5 text-accent" }),
+    features: [
+      "Interactive web navigation",
+      "Form filling automation",
+      "Content extraction",
+    ],
+    demoContent: "Browser automation interface showing an AI agent navigating through an e-commerce checkout process."
   },
   {
     title: "Voice AI Agents",
     description:
-      "Build and deploy low-cost voice AI agents that talk and take actions like humans.",
+      "Create natural-sounding voice assistants that understand context and communicate like humans.",
     icon: React.createElement(Mic, { className: "h-5 w-5 text-accent" }),
     features: [
-      "Low latency audio streaming",
-      "Multilingual support",
+      "Low latency audio processing",
       "Natural conversational flow",
+      "Emotion recognition",
     ],
     demoContent: "Voice assistant interface showing audio latency metrics and language support indicators."
   },
   {
+    title: "Image Classification",
+    description:
+      "Implement powerful computer vision to analyze and categorize images with high accuracy.",
+    icon: React.createElement(ImageIcon, { className: "h-5 w-5 text-accent" }),
+    features: [
+      "Deep learning algorithms",
+      "Custom model training",
+      "Real-time processing",
+    ],
+    demoContent: "Image recognition system showing product images with confidence scores and classification results."
+  },
+  {
+    title: "Video Insights",
+    description:
+      "Extract valuable information from video content through advanced AI analysis and processing.",
+    icon: React.createElement(Video, { className: "h-5 w-5 text-accent" }),
+    features: [
+      "Scene detection",
+      "Object tracking",
+      "Content summarization",
+    ],
+    demoContent: "Video analysis dashboard showing object detection, scene classifications, and content summaries."
+  },
+  {
     title: "AI Powered Analytics",
     description:
-      "Identify issues, ask questions, and unlock valuable insights from your interactions.",
+      "Identify issues, ask questions, and unlock valuable insights from your data with intelligent analysis.",
     icon: React.createElement(BarChart3, { className: "h-5 w-5 text-accent" }),
     features: [
       "Natural language querying",
-      "Advanced visualization",
-      "Trend detection",
+      "Predictive modeling",
+      "Anomaly detection",
     ],
-    demoContent: "Analytics interface with natural language query: 'Which queries are best suited for automated response?'"
+    demoContent: "Analytics dashboard with natural language query capabilities and automated insight generation."
   },
   {
     title: "Intelligent Conversations",
     description:
-      "Seamlessly integrate data sources and SOPs to generate accurate responses and actions.",
+      "Develop chatbots and conversational agents that understand context and provide helpful responses.",
     icon: React.createElement(MessageSquare, { className: "h-5 w-5 text-accent" }),
     features: [
       "Context-aware responses",
-      "Knowledge base integration",
-      "Effortless support automation",
+      "Multi-turn conversations",
+      "Intent recognition",
     ],
-    demoContent: "Chat interface showing a multi-turn conversation with a customer about a spilled coffee incident."
+    demoContent: "Chat interface showing a complex conversation with an AI agent solving a customer's technical problem."
   },
   {
-    title: "Fluid Integrations",
+    title: "Web Crawling",
     description:
-      "Integrate seamlessly with tools like Freshdesk, Zoho, and more for maximum efficiency.",
-    icon: React.createElement(Zap, { className: "h-5 w-5 text-accent" }),
+      "Build intelligent web scrapers that can navigate websites, extract structured data, and process information.",
+    icon: React.createElement(Globe, { className: "h-5 w-5 text-accent" }),
     features: [
-      "API-first architecture",
-      "No-code connection tools",
-      "Enterprise-ready security",
+      "Adaptive navigation",
+      "Structured data extraction",
+      "Rate limiting compliance",
     ],
-    demoContent: "Integration hub displaying connections to multiple platforms (Freshdesk, Salesforce, WhatsApp, Zoom) around a central 'nugget' node."
+    demoContent: "Web crawler interface showing site mapping, data extraction progress, and structured results."
   },
+  {
+    title: "Lasting Memory",
+    description:
+      "Implement persistent knowledge storage for AI systems to maintain context and learn from past interactions.",
+    icon: React.createElement(Database, { className: "h-5 w-5 text-accent" }),
+    features: [
+      "Long-term information retention",
+      "Contextual recall",
+      "Experience-based learning",
+    ],
+    demoContent: "Memory management interface showing conversation history, learned patterns, and knowledge retrieval capabilities."
+  }
 ];
