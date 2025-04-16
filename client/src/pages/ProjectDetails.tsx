@@ -331,7 +331,7 @@ export default function ProjectDetails() {
       {/* Tech Stack section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -343,22 +343,27 @@ export default function ProjectDetails() {
               <p className="text-gray-300">Tools and technologies used to deliver this project</p>
             </motion.div>
             
-            <div className="grid grid-cols-1 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Communication Tools */}
               {projectDetails.techStack.some(tech => tech.category === 'communication') && (
-                <div>
-                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10">For Communication</h3>
-                  <div className="flex flex-wrap gap-6">
+                <div className="bg-card/5 p-6 rounded-lg border border-white/10">
+                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent mr-2">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Communication
+                  </h3>
+                  <div className="space-y-4">
                     {projectDetails.techStack
                       .filter(tech => tech.category === 'communication')
                       .map((tech, index) => (
                         <motion.div
                           key={index}
-                          initial={{ opacity: 0, y: 10 }}
-                          whileInView={{ opacity: 1, y: 0 }}
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="flex items-center gap-3 bg-card/10 p-3 rounded-lg border border-white/10"
+                          className="flex items-center gap-3"
                         >
                           {tech.logo ? (
                             <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
@@ -377,19 +382,26 @@ export default function ProjectDetails() {
               
               {/* Design Tools */}
               {projectDetails.techStack.some(tech => tech.category === 'design') && (
-                <div>
-                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10">For Design</h3>
-                  <div className="flex flex-wrap gap-6">
+                <div className="bg-card/5 p-6 rounded-lg border border-white/10">
+                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent mr-2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <circle cx="12" cy="12" r="6"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                    Design
+                  </h3>
+                  <div className="space-y-4">
                     {projectDetails.techStack
                       .filter(tech => tech.category === 'design')
                       .map((tech, index) => (
                         <motion.div
                           key={index}
-                          initial={{ opacity: 0, y: 10 }}
-                          whileInView={{ opacity: 1, y: 0 }}
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="flex items-center gap-3 bg-card/10 p-3 rounded-lg border border-white/10"
+                          className="flex items-center gap-3"
                         >
                           {tech.logo ? (
                             <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
@@ -408,19 +420,25 @@ export default function ProjectDetails() {
               
               {/* Development Tools */}
               {projectDetails.techStack.some(tech => tech.category === 'development') && (
-                <div>
-                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10">For Development</h3>
-                  <div className="flex flex-wrap gap-6">
+                <div className="bg-card/5 p-6 rounded-lg border border-white/10">
+                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent mr-2">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    Development
+                  </h3>
+                  <div className="space-y-4">
                     {projectDetails.techStack
                       .filter(tech => tech.category === 'development')
                       .map((tech, index) => (
                         <motion.div
                           key={index}
-                          initial={{ opacity: 0, y: 10 }}
-                          whileInView={{ opacity: 1, y: 0 }}
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="flex items-center gap-3 bg-card/10 p-3 rounded-lg border border-white/10"
+                          className="flex items-center gap-3"
                         >
                           {tech.logo ? (
                             <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
@@ -439,19 +457,27 @@ export default function ProjectDetails() {
               
               {/* Analytics Tools */}
               {projectDetails.techStack.some(tech => tech.category === 'analytics') && (
-                <div>
-                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10">For Analytics</h3>
-                  <div className="flex flex-wrap gap-6">
+                <div className="bg-card/5 p-6 rounded-lg border border-white/10">
+                  <h3 className="text-xl font-bold mb-6 pb-2 border-b border-white/10 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent mr-2">
+                      <path d="M3 3v18h18"></path>
+                      <path d="M18.4 8.64L18.4 15.52"></path>
+                      <path d="M13.2 10.24L13.2 15.52"></path>
+                      <path d="M8 12.32L8 15.52"></path>
+                    </svg>
+                    Analytics
+                  </h3>
+                  <div className="space-y-4">
                     {projectDetails.techStack
                       .filter(tech => tech.category === 'analytics')
                       .map((tech, index) => (
                         <motion.div
                           key={index}
-                          initial={{ opacity: 0, y: 10 }}
-                          whileInView={{ opacity: 1, y: 0 }}
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="flex items-center gap-3 bg-card/10 p-3 rounded-lg border border-white/10"
+                          className="flex items-center gap-3"
                         >
                           {tech.logo ? (
                             <img src={tech.logo} alt={tech.name} className="w-6 h-6" />
