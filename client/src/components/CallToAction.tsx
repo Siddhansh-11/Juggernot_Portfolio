@@ -19,7 +19,7 @@ export default function CallToAction() {
         <div className="bg-gradient-to-r from-primary/30 to-accent/30 rounded-2xl p-1">
           <div className="bg-card rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
-              Ready to transform your business?
+              Ready to transform into a Juggernot?
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
               Get started and see how AI can transform your business — faster,

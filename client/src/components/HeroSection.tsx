@@ -9,7 +9,7 @@ export default function HeroSection() {
       </div>
 
       <div className="absolute -left-64 top-1/2 w-96 h-96 bg-accent rounded-full blur-3xl opacity-10 blob-animation"></div>
-      
+
       {/* Shimmer effect overlay */}
       <div className="absolute inset-0 shimmer-effect"></div>
 
@@ -21,13 +21,13 @@ export default function HeroSection() {
       >
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-            Empowering People & Businesses with{" "}
-            <span className="gradient-text">Advanced AI Solutions</span>
+            We Empower Businesses & People, Transforming Them Into Juggernauts
+            With <span className="gradient-text">Advanced AI Solutions</span>
           </h1>
 
           <p className="text-lg text-gray-300 mb-10 leading-relaxed">
-            From full-stack software to LLM-powered copilots, I help companies
-            ship AI-first products that are fast, scalable, and user-friendly.
+            We custom design and develop AI powered applications, copilots and
+            agents that work with intelligence, precision and control.
           </p>
 
           <div className="flex justify-center">
@@ -41,7 +41,7 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 style={{ color: "white", fontWeight: "bold" }}
               >
-                Let's Build Together
+                Let's Build!
               </a>
             </Button>
           </div>
